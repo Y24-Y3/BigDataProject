@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collision Analysis</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+</head>
+<body>
+    <h1>Collision Analysis</h1>
+
+<!-- Render the navigation bar -->
+{% include 'navbar.html' %}
+
+    <section id="Map">
+        <h2>Map</h2>
+        <p>Explore the map to see where collisions have occurred in New York City.</p>
+    </section>
+    <div class="accident_map">
+        <div id="mapid" style="height: 600px;">
+            {% include 'accident_map.html' %}
+        </div>
+    </div>
+    <!-- Render the EDA plots (you'll need to generate them and save them as HTML files) -->
+    <!-- ... -->
+
+    <!-- <script>
+        var map = L.map('mapid').setView([40.7128, -74.0060], 13); // New York City coordinates
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        // Fetch the GeoJSON data from your Flask app
+        fetch('/map-data')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(
+                            `<strong>Vehicle:</strong> ${feature.properties.vehicle}<br>
+                            <strong>Persons Injured:</strong> ${feature.properties.injured}<br>
+                            <strong>Persons Killed:</strong> ${feature.properties.killed}<br>
+                            <strong>Accident Factors:</strong><br>
+                            - ${feature.properties.factor1}<br>
+                            - ${feature.properties.factor2}`
+                        );
+                    }
+                }).addTo(map);
+            });
+    </script>
+     -->
+
+
+</body>
+</html>

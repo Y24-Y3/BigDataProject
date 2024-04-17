@@ -1,6 +1,11 @@
 from flask import Flask, request, jsonify, render_template
-from main import main_py
+import pandas as pd
+import numpy as np
+import folium
 app = Flask(__name__)
+
+df = pd.read_csv('Motor_Vehicle_Collisions_-_Crashes.csv', encoding='latin1', low_memory=False)
+
 
 
 
@@ -8,11 +13,12 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-""" @app.route('/api/', methods=['POST'])
-def api():
-    data = request.get_json()
-    return jsonify(data)
- """
+@app.route('/map')
+def map():
+    accident_map = folium.Map(location=[df['LATITUDE'].mean(), df['LONGITUDE'].mean()], zoom_start=10)
+    accident_map.save('templates/accident_map.html')
+
+    return render_template('home.html')
 
 if __name__ == '__main__':
     app.run()
