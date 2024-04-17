@@ -1,0 +1,2775 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b7641d2b89efcfc50fe5336af025d515 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <h3 align="center" style="font-size:20px"><b>Top 100 Accidents with Most Injured</b></h3>
+            
+    
+            <div class="folium-map" id="map_b7641d2b89efcfc50fe5336af025d515" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b7641d2b89efcfc50fe5336af025d515 = L.map(
+                "map_b7641d2b89efcfc50fe5336af025d515",
+                {
+                    center: [40.743112374999995, -73.910859977],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7be4f05794f96fb77bf8d3e4a9c3129d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_7be4f05794f96fb77bf8d3e4a9c3129d.addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var marker_33117ea53b0868fdb1c977b760c08a58 = L.marker(
+                [40.6790346, -73.9385077],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_e5fe2c83cbca49e5b201c6107260db19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_33117ea53b0868fdb1c977b760c08a58.setIcon(icon_e5fe2c83cbca49e5b201c6107260db19);
+        
+    
+        var popup_d8b0cd8de5deb2228f283e99a6307c3a = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_76b812bc782f94620bca7ac8f2e9c0d3 = $(`<div id="html_76b812bc782f94620bca7ac8f2e9c0d3" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 43.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_d8b0cd8de5deb2228f283e99a6307c3a.setContent(html_76b812bc782f94620bca7ac8f2e9c0d3);
+            
+        
+
+        marker_33117ea53b0868fdb1c977b760c08a58.bindPopup(popup_d8b0cd8de5deb2228f283e99a6307c3a)
+        ;
+
+        
+    
+    
+            var marker_800b5f83e2f5567204f04dd2b0456744 = L.marker(
+                [40.75958, -73.76894],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_05e7e1a64b4425539af4f4b5814f047a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_800b5f83e2f5567204f04dd2b0456744.setIcon(icon_05e7e1a64b4425539af4f4b5814f047a);
+        
+    
+        var popup_d6a8480faa7d23a29fa779046326664f = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_70079a24cd18902e5f0b005f5677d886 = $(`<div id="html_70079a24cd18902e5f0b005f5677d886" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 34.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_d6a8480faa7d23a29fa779046326664f.setContent(html_70079a24cd18902e5f0b005f5677d886);
+            
+        
+
+        marker_800b5f83e2f5567204f04dd2b0456744.bindPopup(popup_d6a8480faa7d23a29fa779046326664f)
+        ;
+
+        
+    
+    
+            var marker_ca000276f6b20222562cc0362674cb55 = L.marker(
+                [40.7241585, -73.7549679],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_56646f56db5a7db9daffb511a43c38e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_ca000276f6b20222562cc0362674cb55.setIcon(icon_56646f56db5a7db9daffb511a43c38e0);
+        
+    
+        var popup_9850654448cf666c8064db21a5a127b9 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_48af4c391f399ae75bf9ba71c7758bc0 = $(`<div id="html_48af4c391f399ae75bf9ba71c7758bc0" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 32.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_9850654448cf666c8064db21a5a127b9.setContent(html_48af4c391f399ae75bf9ba71c7758bc0);
+            
+        
+
+        marker_ca000276f6b20222562cc0362674cb55.bindPopup(popup_9850654448cf666c8064db21a5a127b9)
+        ;
+
+        
+    
+    
+            var marker_f9dec56d8221207c009b21261b2cf465 = L.marker(
+                [40.756035, -73.98695],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_ac54f65e0bb347c991106db3fda37f14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_f9dec56d8221207c009b21261b2cf465.setIcon(icon_ac54f65e0bb347c991106db3fda37f14);
+        
+    
+        var popup_1283f8e5f3b3a07addd1382501809f40 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d66ff96ab3a9d511c0415f28e9196c0a = $(`<div id="html_d66ff96ab3a9d511c0415f28e9196c0a" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 27.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_1283f8e5f3b3a07addd1382501809f40.setContent(html_d66ff96ab3a9d511c0415f28e9196c0a);
+            
+        
+
+        marker_f9dec56d8221207c009b21261b2cf465.bindPopup(popup_1283f8e5f3b3a07addd1382501809f40)
+        ;
+
+        
+    
+    
+            var marker_316ec993b807da724b7e16fa6a27b4c2 = L.marker(
+                [40.57341, -74.126816],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_473bece09eac9da69dd3bf765e802748 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_316ec993b807da724b7e16fa6a27b4c2.setIcon(icon_473bece09eac9da69dd3bf765e802748);
+        
+    
+        var popup_85ac4139b3dc9d4df89780e11d12ede1 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_be21cb6eecdfedd6c44d15eb59cb6a66 = $(`<div id="html_be21cb6eecdfedd6c44d15eb59cb6a66" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 25.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_85ac4139b3dc9d4df89780e11d12ede1.setContent(html_be21cb6eecdfedd6c44d15eb59cb6a66);
+            
+        
+
+        marker_316ec993b807da724b7e16fa6a27b4c2.bindPopup(popup_85ac4139b3dc9d4df89780e11d12ede1)
+        ;
+
+        
+    
+    
+            var marker_cb6b80b2ec7bf745914d5ddcbe43fc12 = L.marker(
+                [40.6444315, -73.9295994],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_16179827fe390cf321b9a618a2c373bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_cb6b80b2ec7bf745914d5ddcbe43fc12.setIcon(icon_16179827fe390cf321b9a618a2c373bc);
+        
+    
+        var popup_cb947a746e4daf15b889b6ea723e8ced = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_1c456fab7c01c5f878e42a7c083af8c4 = $(`<div id="html_1c456fab7c01c5f878e42a7c083af8c4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 24.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_cb947a746e4daf15b889b6ea723e8ced.setContent(html_1c456fab7c01c5f878e42a7c083af8c4);
+            
+        
+
+        marker_cb6b80b2ec7bf745914d5ddcbe43fc12.bindPopup(popup_cb947a746e4daf15b889b6ea723e8ced)
+        ;
+
+        
+    
+    
+            var marker_dc2b7bcc48c555410b226f4d7aee7e8f = L.marker(
+                [40.6920346, -73.9456428],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_88bb04f8454af71e27c5618222df5c73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_dc2b7bcc48c555410b226f4d7aee7e8f.setIcon(icon_88bb04f8454af71e27c5618222df5c73);
+        
+    
+        var popup_b7d2d0a691af96ebf278a2dd98a16d20 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_5db3e3c7a8dc801a988e9468acbb598e = $(`<div id="html_5db3e3c7a8dc801a988e9468acbb598e" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 24.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_b7d2d0a691af96ebf278a2dd98a16d20.setContent(html_5db3e3c7a8dc801a988e9468acbb598e);
+            
+        
+
+        marker_dc2b7bcc48c555410b226f4d7aee7e8f.bindPopup(popup_b7d2d0a691af96ebf278a2dd98a16d20)
+        ;
+
+        
+    
+    
+            var marker_674e9a39c210b07482b07d885ab7ee75 = L.marker(
+                [40.8092926, -73.9031183],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_5d47c688a71600b61baf04afd68ea364 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_674e9a39c210b07482b07d885ab7ee75.setIcon(icon_5d47c688a71600b61baf04afd68ea364);
+        
+    
+        var popup_d3885ea2195798970715e6921867fb00 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_5d5fd792025174abec4877b4d0dfaaf0 = $(`<div id="html_5d5fd792025174abec4877b4d0dfaaf0" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2012 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 24.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_d3885ea2195798970715e6921867fb00.setContent(html_5d5fd792025174abec4877b4d0dfaaf0);
+            
+        
+
+        marker_674e9a39c210b07482b07d885ab7ee75.bindPopup(popup_d3885ea2195798970715e6921867fb00)
+        ;
+
+        
+    
+    
+            var marker_0b64a212cc771c55c744e463336d16ed = L.marker(
+                [40.71893, -73.73439],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_50392d7747c3a5b609aad1a5a51ce154 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_0b64a212cc771c55c744e463336d16ed.setIcon(icon_50392d7747c3a5b609aad1a5a51ce154);
+        
+    
+        var popup_95737f6816a13ba1cd7d9bf759aed88a = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_e4c571968c3eebe37d8555859af8bb0f = $(`<div id="html_e4c571968c3eebe37d8555859af8bb0f" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 23.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_95737f6816a13ba1cd7d9bf759aed88a.setContent(html_e4c571968c3eebe37d8555859af8bb0f);
+            
+        
+
+        marker_0b64a212cc771c55c744e463336d16ed.bindPopup(popup_95737f6816a13ba1cd7d9bf759aed88a)
+        ;
+
+        
+    
+    
+            var marker_7b7c838970dc7d576461e566a0c18f79 = L.marker(
+                [40.7530285, -73.9216199],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_c622f177244dc5f488212187c07ef5fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_7b7c838970dc7d576461e566a0c18f79.setIcon(icon_c622f177244dc5f488212187c07ef5fb);
+        
+    
+        var popup_4005670dfc7c0682c4dd564af8b85185 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d97a2da6c9a368445b040879f94ebbbb = $(`<div id="html_d97a2da6c9a368445b040879f94ebbbb" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 22.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_4005670dfc7c0682c4dd564af8b85185.setContent(html_d97a2da6c9a368445b040879f94ebbbb);
+            
+        
+
+        marker_7b7c838970dc7d576461e566a0c18f79.bindPopup(popup_4005670dfc7c0682c4dd564af8b85185)
+        ;
+
+        
+    
+    
+            var marker_4eb0c70611624ee3d7d0262cd7c16a27 = L.marker(
+                [40.659405, -73.9505],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_8e77da4f30a1ab3321303adb0555a6ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_4eb0c70611624ee3d7d0262cd7c16a27.setIcon(icon_8e77da4f30a1ab3321303adb0555a6ad);
+        
+    
+        var popup_e513bd248abbb9d38ef04490a12ecf84 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_a2a99dfafef8825bed2e8e0106cd3a5d = $(`<div id="html_a2a99dfafef8825bed2e8e0106cd3a5d" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 22.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_e513bd248abbb9d38ef04490a12ecf84.setContent(html_a2a99dfafef8825bed2e8e0106cd3a5d);
+            
+        
+
+        marker_4eb0c70611624ee3d7d0262cd7c16a27.bindPopup(popup_e513bd248abbb9d38ef04490a12ecf84)
+        ;
+
+        
+    
+    
+            var marker_f0fc7f11c30e6efeba575194abfae2b6 = L.marker(
+                [40.6407689, -74.0947511],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_ee5844620a5e9e41b3d343fa8763951a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_f0fc7f11c30e6efeba575194abfae2b6.setIcon(icon_ee5844620a5e9e41b3d343fa8763951a);
+        
+    
+        var popup_740c891d78ab79ce25b386a51abb1af2 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d9784ad3e38b577abf8408a176dc607b = $(`<div id="html_d9784ad3e38b577abf8408a176dc607b" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 22.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_740c891d78ab79ce25b386a51abb1af2.setContent(html_d9784ad3e38b577abf8408a176dc607b);
+            
+        
+
+        marker_f0fc7f11c30e6efeba575194abfae2b6.bindPopup(popup_740c891d78ab79ce25b386a51abb1af2)
+        ;
+
+        
+    
+    
+            var marker_806020c25c4595be1b60e3f1acd87af3 = L.marker(
+                [40.867012, -73.92312],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_274eb5f5afe9e0d977935f25dbaeb794 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_806020c25c4595be1b60e3f1acd87af3.setIcon(icon_274eb5f5afe9e0d977935f25dbaeb794);
+        
+    
+        var popup_f0144a9f44e40c7ee81a4520d38ff71f = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_65ccf2a6d1840f594afcdae7c69d84d1 = $(`<div id="html_65ccf2a6d1840f594afcdae7c69d84d1" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 21.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_f0144a9f44e40c7ee81a4520d38ff71f.setContent(html_65ccf2a6d1840f594afcdae7c69d84d1);
+            
+        
+
+        marker_806020c25c4595be1b60e3f1acd87af3.bindPopup(popup_f0144a9f44e40c7ee81a4520d38ff71f)
+        ;
+
+        
+    
+    
+            var marker_a8af5f6d131984dc9fe6c9e95d3bf0c7 = L.marker(
+                [40.60595, -74.07601],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_a84fc1db3c4c3a014516ea004d7f90f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_a8af5f6d131984dc9fe6c9e95d3bf0c7.setIcon(icon_a84fc1db3c4c3a014516ea004d7f90f5);
+        
+    
+        var popup_3fea0d35c0939a51cab34de1431470f4 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_cde9beb276ccfb5fd59662fb3995fc53 = $(`<div id="html_cde9beb276ccfb5fd59662fb3995fc53" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 20.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_3fea0d35c0939a51cab34de1431470f4.setContent(html_cde9beb276ccfb5fd59662fb3995fc53);
+            
+        
+
+        marker_a8af5f6d131984dc9fe6c9e95d3bf0c7.bindPopup(popup_3fea0d35c0939a51cab34de1431470f4)
+        ;
+
+        
+    
+    
+            var marker_7f2d75b42c9152f9c003cea586daf5c0 = L.marker(
+                [40.845642, -73.90211],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_fb1056d4ef6dfc82a1c1da7d7b2a05d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_7f2d75b42c9152f9c003cea586daf5c0.setIcon(icon_fb1056d4ef6dfc82a1c1da7d7b2a05d9);
+        
+    
+        var popup_843272e86fc74a3ca75b31cf21d41f97 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_0602c15973fc235202dc6bbd12cbe380 = $(`<div id="html_0602c15973fc235202dc6bbd12cbe380" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 20.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_843272e86fc74a3ca75b31cf21d41f97.setContent(html_0602c15973fc235202dc6bbd12cbe380);
+            
+        
+
+        marker_7f2d75b42c9152f9c003cea586daf5c0.bindPopup(popup_843272e86fc74a3ca75b31cf21d41f97)
+        ;
+
+        
+    
+    
+            var marker_800035b2d84fa9192a6ad81f6132f06b = L.marker(
+                [40.6850638, -73.8811327],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_2bd500feab871446bf29ccb3af25dc28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_800035b2d84fa9192a6ad81f6132f06b.setIcon(icon_2bd500feab871446bf29ccb3af25dc28);
+        
+    
+        var popup_84d0bb6cb92b46859f079ddc8be6d456 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_2b0c3999b7363ba4de371ce21d46e610 = $(`<div id="html_2b0c3999b7363ba4de371ce21d46e610" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 19.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_84d0bb6cb92b46859f079ddc8be6d456.setContent(html_2b0c3999b7363ba4de371ce21d46e610);
+            
+        
+
+        marker_800035b2d84fa9192a6ad81f6132f06b.bindPopup(popup_84d0bb6cb92b46859f079ddc8be6d456)
+        ;
+
+        
+    
+    
+            var marker_74d7eb3b294ede9af33370a764c133ff = L.marker(
+                [40.780457, -73.91684],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_9bfc30b5a1cdca492e48921f29ee3c91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_74d7eb3b294ede9af33370a764c133ff.setIcon(icon_9bfc30b5a1cdca492e48921f29ee3c91);
+        
+    
+        var popup_c7f6375fb02870421607d432fca73226 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_42eb317d1fef06bb2e5e4dfa661ade98 = $(`<div id="html_42eb317d1fef06bb2e5e4dfa661ade98" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 19.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_c7f6375fb02870421607d432fca73226.setContent(html_42eb317d1fef06bb2e5e4dfa661ade98);
+            
+        
+
+        marker_74d7eb3b294ede9af33370a764c133ff.bindPopup(popup_c7f6375fb02870421607d432fca73226)
+        ;
+
+        
+    
+    
+            var marker_41b91233c59868ad2b87bcc7ef7f91df = L.marker(
+                [40.8213, -73.88033],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_40f30a176fba03a03a3446c3e493919a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_41b91233c59868ad2b87bcc7ef7f91df.setIcon(icon_40f30a176fba03a03a3446c3e493919a);
+        
+    
+        var popup_c64fedac64c6a834150b84a173f09613 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_6f871f1845d7d8840402fd184611e3f5 = $(`<div id="html_6f871f1845d7d8840402fd184611e3f5" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 19.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_c64fedac64c6a834150b84a173f09613.setContent(html_6f871f1845d7d8840402fd184611e3f5);
+            
+        
+
+        marker_41b91233c59868ad2b87bcc7ef7f91df.bindPopup(popup_c64fedac64c6a834150b84a173f09613)
+        ;
+
+        
+    
+    
+            var marker_67584c49f40084e7727eb957cf207129 = L.marker(
+                [40.62551, -74.07599],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_7b7386d6b8abff470700d49e1b19b9f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_67584c49f40084e7727eb957cf207129.setIcon(icon_7b7386d6b8abff470700d49e1b19b9f6);
+        
+    
+        var popup_068d4b0e94775caffe3df26e33b493df = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_221b08ca99487d25ebca26403c98e5a5 = $(`<div id="html_221b08ca99487d25ebca26403c98e5a5" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2021 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 18.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_068d4b0e94775caffe3df26e33b493df.setContent(html_221b08ca99487d25ebca26403c98e5a5);
+            
+        
+
+        marker_67584c49f40084e7727eb957cf207129.bindPopup(popup_068d4b0e94775caffe3df26e33b493df)
+        ;
+
+        
+    
+    
+            var marker_90d45c6f2bb097d071e470faabdf7023 = L.marker(
+                [40.675312, -73.777145],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_93c186a693c0352e2b3d2260da1c0656 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_90d45c6f2bb097d071e470faabdf7023.setIcon(icon_93c186a693c0352e2b3d2260da1c0656);
+        
+    
+        var popup_07b2c45db96fb48691d6f9cd070a7791 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d18ffc3cd12725888823e73a307f36d4 = $(`<div id="html_d18ffc3cd12725888823e73a307f36d4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 18.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_07b2c45db96fb48691d6f9cd070a7791.setContent(html_d18ffc3cd12725888823e73a307f36d4);
+            
+        
+
+        marker_90d45c6f2bb097d071e470faabdf7023.bindPopup(popup_07b2c45db96fb48691d6f9cd070a7791)
+        ;
+
+        
+    
+    
+            var marker_c02181948a9ad2adf07708b1e9a95873 = L.marker(
+                [40.870346, -73.9044],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_098bc57a481a56868c2f7c7dba7e7443 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_c02181948a9ad2adf07708b1e9a95873.setIcon(icon_098bc57a481a56868c2f7c7dba7e7443);
+        
+    
+        var popup_86491c00c53ed694c04b432b9a6c1715 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_1fcd5008f20acaa1f11bd45ec8ade659 = $(`<div id="html_1fcd5008f20acaa1f11bd45ec8ade659" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 18.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_86491c00c53ed694c04b432b9a6c1715.setContent(html_1fcd5008f20acaa1f11bd45ec8ade659);
+            
+        
+
+        marker_c02181948a9ad2adf07708b1e9a95873.bindPopup(popup_86491c00c53ed694c04b432b9a6c1715)
+        ;
+
+        
+    
+    
+            var marker_b7cbd2f5d0a67b48501b65ca9eef1afc = L.marker(
+                [40.824913, -73.8689],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_6ed763e57c2c4f42ac4a217774ff5b87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_b7cbd2f5d0a67b48501b65ca9eef1afc.setIcon(icon_6ed763e57c2c4f42ac4a217774ff5b87);
+        
+    
+        var popup_a78b3fd4e5f15b0558dcf2356683833d = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_e9a9037566facd9d206b8ef223300db2 = $(`<div id="html_e9a9037566facd9d206b8ef223300db2" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 18.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_a78b3fd4e5f15b0558dcf2356683833d.setContent(html_e9a9037566facd9d206b8ef223300db2);
+            
+        
+
+        marker_b7cbd2f5d0a67b48501b65ca9eef1afc.bindPopup(popup_a78b3fd4e5f15b0558dcf2356683833d)
+        ;
+
+        
+    
+    
+            var marker_d62d2ab6d073e73032bd49df95ac22d9 = L.marker(
+                [40.736885, -73.978546],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_ddb0310f5293add54187736176e57b9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_d62d2ab6d073e73032bd49df95ac22d9.setIcon(icon_ddb0310f5293add54187736176e57b9e);
+        
+    
+        var popup_86c369523b957a09d1032237d4ed73ab = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_368e5cd13359fe70fbf50b8883b8a1ba = $(`<div id="html_368e5cd13359fe70fbf50b8883b8a1ba" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 18.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_86c369523b957a09d1032237d4ed73ab.setContent(html_368e5cd13359fe70fbf50b8883b8a1ba);
+            
+        
+
+        marker_d62d2ab6d073e73032bd49df95ac22d9.bindPopup(popup_86c369523b957a09d1032237d4ed73ab)
+        ;
+
+        
+    
+    
+            var marker_12b603cec11b4dfe3fffea4a6ce0eed1 = L.marker(
+                [40.665035, -73.8921335],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_3e5a6bc269b0d68fb4b47b777c31ccda = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_12b603cec11b4dfe3fffea4a6ce0eed1.setIcon(icon_3e5a6bc269b0d68fb4b47b777c31ccda);
+        
+    
+        var popup_59721c1bef19cfed87dd97f8c7faf890 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_ebd4959ca82bde68906971d3bc424533 = $(`<div id="html_ebd4959ca82bde68906971d3bc424533" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 18.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_59721c1bef19cfed87dd97f8c7faf890.setContent(html_ebd4959ca82bde68906971d3bc424533);
+            
+        
+
+        marker_12b603cec11b4dfe3fffea4a6ce0eed1.bindPopup(popup_59721c1bef19cfed87dd97f8c7faf890)
+        ;
+
+        
+    
+    
+            var marker_f3a1adc86280c33492b6e94fe83dedf3 = L.marker(
+                [40.602135, -74.114876],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_387b504ce35165718e50d3fb770cd5b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_f3a1adc86280c33492b6e94fe83dedf3.setIcon(icon_387b504ce35165718e50d3fb770cd5b2);
+        
+    
+        var popup_2634bdc466ab97b2a42387c4fc987d27 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_85bf30cb3191a506f43b6918cbee90a6 = $(`<div id="html_85bf30cb3191a506f43b6918cbee90a6" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 17.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_2634bdc466ab97b2a42387c4fc987d27.setContent(html_85bf30cb3191a506f43b6918cbee90a6);
+            
+        
+
+        marker_f3a1adc86280c33492b6e94fe83dedf3.bindPopup(popup_2634bdc466ab97b2a42387c4fc987d27)
+        ;
+
+        
+    
+    
+            var marker_4115a21f1903d2006f0c378aab7732ff = L.marker(
+                [40.66118, -73.95696],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_722c0500466c7c32b5cd2b44c037f0b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_4115a21f1903d2006f0c378aab7732ff.setIcon(icon_722c0500466c7c32b5cd2b44c037f0b3);
+        
+    
+        var popup_1632946ab50b17edf0704cb3d9d31ef7 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_96b1589d8be50fff0e988014ebc0f7d9 = $(`<div id="html_96b1589d8be50fff0e988014ebc0f7d9" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2021 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 17.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_1632946ab50b17edf0704cb3d9d31ef7.setContent(html_96b1589d8be50fff0e988014ebc0f7d9);
+            
+        
+
+        marker_4115a21f1903d2006f0c378aab7732ff.bindPopup(popup_1632946ab50b17edf0704cb3d9d31ef7)
+        ;
+
+        
+    
+    
+            var marker_16e758fb990efc634816d735c1d6a663 = L.marker(
+                [40.8510798, -73.8486114],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_3a63f4fb07fb3dafe8f4941f4364b1f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_16e758fb990efc634816d735c1d6a663.setIcon(icon_3a63f4fb07fb3dafe8f4941f4364b1f0);
+        
+    
+        var popup_b36dd0a227dd2c4be2aa08a067c38466 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_8b90c413247fdf5d815810ec341bb498 = $(`<div id="html_8b90c413247fdf5d815810ec341bb498" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 17.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_b36dd0a227dd2c4be2aa08a067c38466.setContent(html_8b90c413247fdf5d815810ec341bb498);
+            
+        
+
+        marker_16e758fb990efc634816d735c1d6a663.bindPopup(popup_b36dd0a227dd2c4be2aa08a067c38466)
+        ;
+
+        
+    
+    
+            var marker_9b6781de055628b6c0ee59044edd0f81 = L.marker(
+                [40.84956, -73.83401],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_412c80c07dabab7c0ba2942bc9adcc59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_9b6781de055628b6c0ee59044edd0f81.setIcon(icon_412c80c07dabab7c0ba2942bc9adcc59);
+        
+    
+        var popup_bcb2a06fb22acb4e5a58ea19c06ec8ff = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_b0220c249a5d93cfa7ee727749bf2ca2 = $(`<div id="html_b0220c249a5d93cfa7ee727749bf2ca2" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 17.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_bcb2a06fb22acb4e5a58ea19c06ec8ff.setContent(html_b0220c249a5d93cfa7ee727749bf2ca2);
+            
+        
+
+        marker_9b6781de055628b6c0ee59044edd0f81.bindPopup(popup_bcb2a06fb22acb4e5a58ea19c06ec8ff)
+        ;
+
+        
+    
+    
+            var marker_8c0fac0cc6406ecd8d0f99bc50d3132c = L.marker(
+                [40.846657, -73.89619],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b96da83940db5acf69ad3d7d0624597f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_8c0fac0cc6406ecd8d0f99bc50d3132c.setIcon(icon_b96da83940db5acf69ad3d7d0624597f);
+        
+    
+        var popup_ea64c0b23ea067df8ba4beef8fe4e020 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d9c322261ae02d6b7d6c9f06e9d01240 = $(`<div id="html_d9c322261ae02d6b7d6c9f06e9d01240" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 17.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_ea64c0b23ea067df8ba4beef8fe4e020.setContent(html_d9c322261ae02d6b7d6c9f06e9d01240);
+            
+        
+
+        marker_8c0fac0cc6406ecd8d0f99bc50d3132c.bindPopup(popup_ea64c0b23ea067df8ba4beef8fe4e020)
+        ;
+
+        
+    
+    
+            var marker_dc221ddf5dab389b25608e9a7573ab5c = L.marker(
+                [40.807148, -73.943985],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_57a7f68e6d12f2551110fa0d526f3b68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_dc221ddf5dab389b25608e9a7573ab5c.setIcon(icon_57a7f68e6d12f2551110fa0d526f3b68);
+        
+    
+        var popup_77c2b7a86938f276d024d8eb7af1dfd0 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d34efc9313cb654e428a2cafa858d0cb = $(`<div id="html_d34efc9313cb654e428a2cafa858d0cb" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 17.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_77c2b7a86938f276d024d8eb7af1dfd0.setContent(html_d34efc9313cb654e428a2cafa858d0cb);
+            
+        
+
+        marker_dc221ddf5dab389b25608e9a7573ab5c.bindPopup(popup_77c2b7a86938f276d024d8eb7af1dfd0)
+        ;
+
+        
+    
+    
+            var marker_15302eea347cbc24c5d2c5d56f3e5d97 = L.marker(
+                [40.66696, -73.77078],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_97590357388bad9f8edbad3b2089f7fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_15302eea347cbc24c5d2c5d56f3e5d97.setIcon(icon_97590357388bad9f8edbad3b2089f7fd);
+        
+    
+        var popup_4aba3a1855e7c24d29849e2dad3eee71 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_137ab672c1378921ae8a14a965fa8f3a = $(`<div id="html_137ab672c1378921ae8a14a965fa8f3a" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_4aba3a1855e7c24d29849e2dad3eee71.setContent(html_137ab672c1378921ae8a14a965fa8f3a);
+            
+        
+
+        marker_15302eea347cbc24c5d2c5d56f3e5d97.bindPopup(popup_4aba3a1855e7c24d29849e2dad3eee71)
+        ;
+
+        
+    
+    
+            var marker_ed1c8f1b041363c49ed353f19dbc60b7 = L.marker(
+                [40.694378, -73.803764],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_f91922d48ee2e702aa7d5ce2d56cdcd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_ed1c8f1b041363c49ed353f19dbc60b7.setIcon(icon_f91922d48ee2e702aa7d5ce2d56cdcd1);
+        
+    
+        var popup_4c10c9f7cd1503d8dc9cedde60b2980d = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d8487325efa781145efc0e6c537ac143 = $(`<div id="html_d8487325efa781145efc0e6c537ac143" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_4c10c9f7cd1503d8dc9cedde60b2980d.setContent(html_d8487325efa781145efc0e6c537ac143);
+            
+        
+
+        marker_ed1c8f1b041363c49ed353f19dbc60b7.bindPopup(popup_4c10c9f7cd1503d8dc9cedde60b2980d)
+        ;
+
+        
+    
+    
+            var marker_5d0644931912aeebacbce7698d506930 = L.marker(
+                [40.6914231, -73.7874917],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_557039b536c645facf85ef4588d64ec0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_5d0644931912aeebacbce7698d506930.setIcon(icon_557039b536c645facf85ef4588d64ec0);
+        
+    
+        var popup_bcf6350da2bb260e0965e28fb5b19768 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3aac540bfd1cbb5fbc0803b4c40f5617 = $(`<div id="html_3aac540bfd1cbb5fbc0803b4c40f5617" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_bcf6350da2bb260e0965e28fb5b19768.setContent(html_3aac540bfd1cbb5fbc0803b4c40f5617);
+            
+        
+
+        marker_5d0644931912aeebacbce7698d506930.bindPopup(popup_bcf6350da2bb260e0965e28fb5b19768)
+        ;
+
+        
+    
+    
+            var marker_66b2448b3c98725d0e8f4866165cc0d5 = L.marker(
+                [40.7589746, -73.9189996],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_bf1b22eb50c63f52a66f7a41491193e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_66b2448b3c98725d0e8f4866165cc0d5.setIcon(icon_bf1b22eb50c63f52a66f7a41491193e0);
+        
+    
+        var popup_32423542c5030240de53db111587ec62 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c3cc0f068b194c7e68c9ca0ff2d1f2eb = $(`<div id="html_c3cc0f068b194c7e68c9ca0ff2d1f2eb" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_32423542c5030240de53db111587ec62.setContent(html_c3cc0f068b194c7e68c9ca0ff2d1f2eb);
+            
+        
+
+        marker_66b2448b3c98725d0e8f4866165cc0d5.bindPopup(popup_32423542c5030240de53db111587ec62)
+        ;
+
+        
+    
+    
+            var marker_2826ccf29e91111d2f5fd3b85bf45973 = L.marker(
+                [40.6037297, -74.1862851],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_db2dfd220e0e500ae4cb05a136f9afa8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_2826ccf29e91111d2f5fd3b85bf45973.setIcon(icon_db2dfd220e0e500ae4cb05a136f9afa8);
+        
+    
+        var popup_15e64a8a0981287ee6fc95a4e4eff88e = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_7a5720dcec5a5b7d114cfc30b449d66b = $(`<div id="html_7a5720dcec5a5b7d114cfc30b449d66b" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_15e64a8a0981287ee6fc95a4e4eff88e.setContent(html_7a5720dcec5a5b7d114cfc30b449d66b);
+            
+        
+
+        marker_2826ccf29e91111d2f5fd3b85bf45973.bindPopup(popup_15e64a8a0981287ee6fc95a4e4eff88e)
+        ;
+
+        
+    
+    
+            var marker_3c5ea9f62a629e5fff5b9b5fc1b1b032 = L.marker(
+                [40.77855, -73.925674],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b0d3e6d572ee1341c9bcbef1a8ec6484 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_3c5ea9f62a629e5fff5b9b5fc1b1b032.setIcon(icon_b0d3e6d572ee1341c9bcbef1a8ec6484);
+        
+    
+        var popup_a3e9c84e5dec39582d2592d34c92f141 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_204cc7e446f5c264f0fce81b95398e3a = $(`<div id="html_204cc7e446f5c264f0fce81b95398e3a" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_a3e9c84e5dec39582d2592d34c92f141.setContent(html_204cc7e446f5c264f0fce81b95398e3a);
+            
+        
+
+        marker_3c5ea9f62a629e5fff5b9b5fc1b1b032.bindPopup(popup_a3e9c84e5dec39582d2592d34c92f141)
+        ;
+
+        
+    
+    
+            var marker_8ef95765153bdc024d7e015c91466e1a = L.marker(
+                [40.639996, -74.02442],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_eeb9d54e43c4405a9132f44dac8aa5a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_8ef95765153bdc024d7e015c91466e1a.setIcon(icon_eeb9d54e43c4405a9132f44dac8aa5a0);
+        
+    
+        var popup_acd1114f7b8540ae04090e3f6102f3cd = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_a499211bcdbd2fa04721b4841f98704a = $(`<div id="html_a499211bcdbd2fa04721b4841f98704a" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2021 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 16.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_acd1114f7b8540ae04090e3f6102f3cd.setContent(html_a499211bcdbd2fa04721b4841f98704a);
+            
+        
+
+        marker_8ef95765153bdc024d7e015c91466e1a.bindPopup(popup_acd1114f7b8540ae04090e3f6102f3cd)
+        ;
+
+        
+    
+    
+            var marker_60909cf4f0c976f85fe5ffd9afd21f1a = L.marker(
+                [40.66426, -73.893936],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_9eddf34b546ba50a57b4aa99687cb697 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_60909cf4f0c976f85fe5ffd9afd21f1a.setIcon(icon_9eddf34b546ba50a57b4aa99687cb697);
+        
+    
+        var popup_402b03bcb69e3215ef089e60a250dcb2 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_5094ca19bbb664e0ec03594a96771e7a = $(`<div id="html_5094ca19bbb664e0ec03594a96771e7a" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2024 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_402b03bcb69e3215ef089e60a250dcb2.setContent(html_5094ca19bbb664e0ec03594a96771e7a);
+            
+        
+
+        marker_60909cf4f0c976f85fe5ffd9afd21f1a.bindPopup(popup_402b03bcb69e3215ef089e60a250dcb2)
+        ;
+
+        
+    
+    
+            var marker_d16a3e0fb08bc7ef9be3187fc92f5796 = L.marker(
+                [40.63226, -73.90088],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_54285ab030ab9561546d7ab97ab52d97 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_d16a3e0fb08bc7ef9be3187fc92f5796.setIcon(icon_54285ab030ab9561546d7ab97ab52d97);
+        
+    
+        var popup_d278b90253864ef100d6aa33eca0a481 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_989c5befa359d4a8ae245d40b5d59876 = $(`<div id="html_989c5befa359d4a8ae245d40b5d59876" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2020 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_d278b90253864ef100d6aa33eca0a481.setContent(html_989c5befa359d4a8ae245d40b5d59876);
+            
+        
+
+        marker_d16a3e0fb08bc7ef9be3187fc92f5796.bindPopup(popup_d278b90253864ef100d6aa33eca0a481)
+        ;
+
+        
+    
+    
+            var marker_4792b9c9333605f11139d2496703d8c8 = L.marker(
+                [40.762978, -73.83198],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_a45e3a1573cde3b0a5e6a98cdd9a3cfb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_4792b9c9333605f11139d2496703d8c8.setIcon(icon_a45e3a1573cde3b0a5e6a98cdd9a3cfb);
+        
+    
+        var popup_8b854f3cd47cbfdefe6a528fbcbd4f76 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_7cd3df2375dd3894868e38bb1b6f91a4 = $(`<div id="html_7cd3df2375dd3894868e38bb1b6f91a4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_8b854f3cd47cbfdefe6a528fbcbd4f76.setContent(html_7cd3df2375dd3894868e38bb1b6f91a4);
+            
+        
+
+        marker_4792b9c9333605f11139d2496703d8c8.bindPopup(popup_8b854f3cd47cbfdefe6a528fbcbd4f76)
+        ;
+
+        
+    
+    
+            var marker_ec7e00e3c5f20e546a3ffbe2f48fb76b = L.marker(
+                [40.615154, -74.15732],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_8f0932f9e0fe250188e6e257e92ceffe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_ec7e00e3c5f20e546a3ffbe2f48fb76b.setIcon(icon_8f0932f9e0fe250188e6e257e92ceffe);
+        
+    
+        var popup_4ef97ab891f87ff4fc727af8ab20a5cd = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_144354fd22029628ae79f0e56e4378c1 = $(`<div id="html_144354fd22029628ae79f0e56e4378c1" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_4ef97ab891f87ff4fc727af8ab20a5cd.setContent(html_144354fd22029628ae79f0e56e4378c1);
+            
+        
+
+        marker_ec7e00e3c5f20e546a3ffbe2f48fb76b.bindPopup(popup_4ef97ab891f87ff4fc727af8ab20a5cd)
+        ;
+
+        
+    
+    
+            var marker_a7a1dfd4809e9b9a4349a955d00bb527 = L.marker(
+                [40.6863458, -73.9233966],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_9119cb93dba310717e6eba26fd09ccbc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_a7a1dfd4809e9b9a4349a955d00bb527.setIcon(icon_9119cb93dba310717e6eba26fd09ccbc);
+        
+    
+        var popup_0671141ab728beef69c7814c3f474f18 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3c7dd79d6a7c8706ea4f22d7dd473efe = $(`<div id="html_3c7dd79d6a7c8706ea4f22d7dd473efe" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_0671141ab728beef69c7814c3f474f18.setContent(html_3c7dd79d6a7c8706ea4f22d7dd473efe);
+            
+        
+
+        marker_a7a1dfd4809e9b9a4349a955d00bb527.bindPopup(popup_0671141ab728beef69c7814c3f474f18)
+        ;
+
+        
+    
+    
+            var marker_00c96e38128b2e7320821ba579b879a6 = L.marker(
+                [40.667507, -73.88007],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_1e17ae9594f71b1942b2abc89fd96fcd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_00c96e38128b2e7320821ba579b879a6.setIcon(icon_1e17ae9594f71b1942b2abc89fd96fcd);
+        
+    
+        var popup_7ba593258ab95d70b4c01651cab7200b = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_ddd113eba69b2df1dd43d94e38b1ef11 = $(`<div id="html_ddd113eba69b2df1dd43d94e38b1ef11" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_7ba593258ab95d70b4c01651cab7200b.setContent(html_ddd113eba69b2df1dd43d94e38b1ef11);
+            
+        
+
+        marker_00c96e38128b2e7320821ba579b879a6.bindPopup(popup_7ba593258ab95d70b4c01651cab7200b)
+        ;
+
+        
+    
+    
+            var marker_1953f8877586c4d2a1dd2d4ec80dfa22 = L.marker(
+                [40.70191, -73.93699],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_dbaaae333c2e7e06152c79e3ad7bd9ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_1953f8877586c4d2a1dd2d4ec80dfa22.setIcon(icon_dbaaae333c2e7e06152c79e3ad7bd9ff);
+        
+    
+        var popup_9e6cce6a2febb982bab60b7de787b18d = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_e6fc619a880765e4da5e0f445b76916e = $(`<div id="html_e6fc619a880765e4da5e0f445b76916e" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_9e6cce6a2febb982bab60b7de787b18d.setContent(html_e6fc619a880765e4da5e0f445b76916e);
+            
+        
+
+        marker_1953f8877586c4d2a1dd2d4ec80dfa22.bindPopup(popup_9e6cce6a2febb982bab60b7de787b18d)
+        ;
+
+        
+    
+    
+            var marker_dd7e001985e1b5fa8e922571cf4f86c0 = L.marker(
+                [40.84275, -73.92283],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_652457923eb8ea050952f038fdca9434 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_dd7e001985e1b5fa8e922571cf4f86c0.setIcon(icon_652457923eb8ea050952f038fdca9434);
+        
+    
+        var popup_056d7612ba48ced6c4bc55b468ef530b = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_87c15f539bb8583f5a4788128242c785 = $(`<div id="html_87c15f539bb8583f5a4788128242c785" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_056d7612ba48ced6c4bc55b468ef530b.setContent(html_87c15f539bb8583f5a4788128242c785);
+            
+        
+
+        marker_dd7e001985e1b5fa8e922571cf4f86c0.bindPopup(popup_056d7612ba48ced6c4bc55b468ef530b)
+        ;
+
+        
+    
+    
+            var marker_8dae0d5ee3cfdaa6729b39e7a28a3162 = L.marker(
+                [40.7591997, -73.9846193],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_6763e341e40c62b7463db27058ce1a6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_8dae0d5ee3cfdaa6729b39e7a28a3162.setIcon(icon_6763e341e40c62b7463db27058ce1a6d);
+        
+    
+        var popup_4e9f259db72909487d14ccc25d5a9c2f = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_1c1b11c60aaae09063b8959a58c8f7a6 = $(`<div id="html_1c1b11c60aaae09063b8959a58c8f7a6" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_4e9f259db72909487d14ccc25d5a9c2f.setContent(html_1c1b11c60aaae09063b8959a58c8f7a6);
+            
+        
+
+        marker_8dae0d5ee3cfdaa6729b39e7a28a3162.bindPopup(popup_4e9f259db72909487d14ccc25d5a9c2f)
+        ;
+
+        
+    
+    
+            var marker_f2e6fcf757edac3b84d83e058b124eff = L.marker(
+                [40.653984, -73.927704],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_03cc7f7e1473116ef42f6cd15e1d457e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_f2e6fcf757edac3b84d83e058b124eff.setIcon(icon_03cc7f7e1473116ef42f6cd15e1d457e);
+        
+    
+        var popup_3714a41691ed0e8feb5afae1eeca9e1b = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_9591e3a8cff74dfbdfc4defdf31966fb = $(`<div id="html_9591e3a8cff74dfbdfc4defdf31966fb" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2022 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_3714a41691ed0e8feb5afae1eeca9e1b.setContent(html_9591e3a8cff74dfbdfc4defdf31966fb);
+            
+        
+
+        marker_f2e6fcf757edac3b84d83e058b124eff.bindPopup(popup_3714a41691ed0e8feb5afae1eeca9e1b)
+        ;
+
+        
+    
+    
+            var marker_3d65f0cceb9a7faa650bb1745e2d8567 = L.marker(
+                [40.683582, -73.953964],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_2be352b3591466500a25dd61c44781ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_3d65f0cceb9a7faa650bb1745e2d8567.setIcon(icon_2be352b3591466500a25dd61c44781ea);
+        
+    
+        var popup_4f7d7ad55dec0478550ca53e3a5cda18 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_4b16d32c038e0e8713dfa1d81f6e5475 = $(`<div id="html_4b16d32c038e0e8713dfa1d81f6e5475" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2022 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_4f7d7ad55dec0478550ca53e3a5cda18.setContent(html_4b16d32c038e0e8713dfa1d81f6e5475);
+            
+        
+
+        marker_3d65f0cceb9a7faa650bb1745e2d8567.bindPopup(popup_4f7d7ad55dec0478550ca53e3a5cda18)
+        ;
+
+        
+    
+    
+            var marker_35505d1d577d5ad096782a055c0c8b1d = L.marker(
+                [40.65505, -73.95631],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_1f97e9d9aab88a2bc689f98292853ab0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_35505d1d577d5ad096782a055c0c8b1d.setIcon(icon_1f97e9d9aab88a2bc689f98292853ab0);
+        
+    
+        var popup_fef63d3d05b3b6c3d5a1c3d2a9d6abb1 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_ba2ebc1e646129d6c693a89a68b647b7 = $(`<div id="html_ba2ebc1e646129d6c693a89a68b647b7" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 15.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_fef63d3d05b3b6c3d5a1c3d2a9d6abb1.setContent(html_ba2ebc1e646129d6c693a89a68b647b7);
+            
+        
+
+        marker_35505d1d577d5ad096782a055c0c8b1d.bindPopup(popup_fef63d3d05b3b6c3d5a1c3d2a9d6abb1)
+        ;
+
+        
+    
+    
+            var marker_7c953820d893e8ecdd934d2ab1ef88f5 = L.marker(
+                [40.887444, -73.878006],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_e885241a09da3577454c30fa6865cf22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_7c953820d893e8ecdd934d2ab1ef88f5.setIcon(icon_e885241a09da3577454c30fa6865cf22);
+        
+    
+        var popup_49ff0f480ab948c06460c85bc1354208 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_e29bfd525ccf6d39cbc313260cfd2c9b = $(`<div id="html_e29bfd525ccf6d39cbc313260cfd2c9b" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2021 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_49ff0f480ab948c06460c85bc1354208.setContent(html_e29bfd525ccf6d39cbc313260cfd2c9b);
+            
+        
+
+        marker_7c953820d893e8ecdd934d2ab1ef88f5.bindPopup(popup_49ff0f480ab948c06460c85bc1354208)
+        ;
+
+        
+    
+    
+            var marker_3247a78b8d3a90d1f692e59b059d1576 = L.marker(
+                [40.66292, -73.890625],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_5a5338635dad6add1d755deb5b821d6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_3247a78b8d3a90d1f692e59b059d1576.setIcon(icon_5a5338635dad6add1d755deb5b821d6e);
+        
+    
+        var popup_456a21bb0bfb4676061ea91820058995 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_832536666dd856da892e08a27debcc69 = $(`<div id="html_832536666dd856da892e08a27debcc69" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_456a21bb0bfb4676061ea91820058995.setContent(html_832536666dd856da892e08a27debcc69);
+            
+        
+
+        marker_3247a78b8d3a90d1f692e59b059d1576.bindPopup(popup_456a21bb0bfb4676061ea91820058995)
+        ;
+
+        
+    
+    
+            var marker_4549222d541c76709af96d0e869ccfda = L.marker(
+                [40.8251, -73.890564],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_d853f022a741415d1b2764b7215daee9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_4549222d541c76709af96d0e869ccfda.setIcon(icon_d853f022a741415d1b2764b7215daee9);
+        
+    
+        var popup_9dd0997c4f8f5ccd34d3da5fa671a4db = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d9b37cc4f1270aa3965c4081393ba2b4 = $(`<div id="html_d9b37cc4f1270aa3965c4081393ba2b4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_9dd0997c4f8f5ccd34d3da5fa671a4db.setContent(html_d9b37cc4f1270aa3965c4081393ba2b4);
+            
+        
+
+        marker_4549222d541c76709af96d0e869ccfda.bindPopup(popup_9dd0997c4f8f5ccd34d3da5fa671a4db)
+        ;
+
+        
+    
+    
+            var marker_ad0b4d82f8e47b0c21dc431e3e6025d8 = L.marker(
+                [40.84487, -73.92068],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_4b4adac2001b4a9af98360ab45aba012 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_ad0b4d82f8e47b0c21dc431e3e6025d8.setIcon(icon_4b4adac2001b4a9af98360ab45aba012);
+        
+    
+        var popup_dee9eb6d5bb037905f08e5b1e487c670 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_97dbcfec323bbdb3ccf47647c8f1d3ae = $(`<div id="html_97dbcfec323bbdb3ccf47647c8f1d3ae" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_dee9eb6d5bb037905f08e5b1e487c670.setContent(html_97dbcfec323bbdb3ccf47647c8f1d3ae);
+            
+        
+
+        marker_ad0b4d82f8e47b0c21dc431e3e6025d8.bindPopup(popup_dee9eb6d5bb037905f08e5b1e487c670)
+        ;
+
+        
+    
+    
+            var marker_1a698ccd4d583899ebb12573c9afb133 = L.marker(
+                [40.81295, -73.88418],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_1cd6dba5d15ede5f8c7243548d3ca941 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_1a698ccd4d583899ebb12573c9afb133.setIcon(icon_1cd6dba5d15ede5f8c7243548d3ca941);
+        
+    
+        var popup_c80a7d5cf594455dea60a5bf446c5684 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_165c83df71b0e7b5489f286a3c44bbb0 = $(`<div id="html_165c83df71b0e7b5489f286a3c44bbb0" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2022 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_c80a7d5cf594455dea60a5bf446c5684.setContent(html_165c83df71b0e7b5489f286a3c44bbb0);
+            
+        
+
+        marker_1a698ccd4d583899ebb12573c9afb133.bindPopup(popup_c80a7d5cf594455dea60a5bf446c5684)
+        ;
+
+        
+    
+    
+            var marker_f652867b002f4278844bcae5de9b3912 = L.marker(
+                [40.8757308, -73.8795588],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b04a1dda4a4634e5f67239ff51f95201 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_f652867b002f4278844bcae5de9b3912.setIcon(icon_b04a1dda4a4634e5f67239ff51f95201);
+        
+    
+        var popup_a359ce8f8e72a21423af45b4eeaca067 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_74786be24525562f52305cef339276e0 = $(`<div id="html_74786be24525562f52305cef339276e0" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_a359ce8f8e72a21423af45b4eeaca067.setContent(html_74786be24525562f52305cef339276e0);
+            
+        
+
+        marker_f652867b002f4278844bcae5de9b3912.bindPopup(popup_a359ce8f8e72a21423af45b4eeaca067)
+        ;
+
+        
+    
+    
+            var marker_0c7d4eef0709e394f9e954b2436081ee = L.marker(
+                [40.8540693, -73.8993168],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_161bef1d9852600520a43ec548624908 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_0c7d4eef0709e394f9e954b2436081ee.setIcon(icon_161bef1d9852600520a43ec548624908);
+        
+    
+        var popup_8897c6f4f4a04d02f2bc4062e3d8f275 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_4703670caf7198774ec7c9d68b6d429c = $(`<div id="html_4703670caf7198774ec7c9d68b6d429c" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 14.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_8897c6f4f4a04d02f2bc4062e3d8f275.setContent(html_4703670caf7198774ec7c9d68b6d429c);
+            
+        
+
+        marker_0c7d4eef0709e394f9e954b2436081ee.bindPopup(popup_8897c6f4f4a04d02f2bc4062e3d8f275)
+        ;
+
+        
+    
+    
+            var marker_d857d037e3eee2b1a00ed17e6ffea279 = L.marker(
+                [40.8992486, -73.8460818],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_9b24b6db3f71559cfd6cbf1980d011d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_d857d037e3eee2b1a00ed17e6ffea279.setIcon(icon_9b24b6db3f71559cfd6cbf1980d011d3);
+        
+    
+        var popup_530209e286d86e76231e719e1417d202 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_6147019dfded43ded680f3052d820813 = $(`<div id="html_6147019dfded43ded680f3052d820813" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_530209e286d86e76231e719e1417d202.setContent(html_6147019dfded43ded680f3052d820813);
+            
+        
+
+        marker_d857d037e3eee2b1a00ed17e6ffea279.bindPopup(popup_530209e286d86e76231e719e1417d202)
+        ;
+
+        
+    
+    
+            var marker_57ca10dfd01846a4b74c2ab90ce0119b = L.marker(
+                [40.833233, -73.8282],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_99eea32e0bf39f709ba6c14538bdd09e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_57ca10dfd01846a4b74c2ab90ce0119b.setIcon(icon_99eea32e0bf39f709ba6c14538bdd09e);
+        
+    
+        var popup_0121c85d4492580ac42af107e6b4b999 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_7dd290eb69bf8a2e04982694e1f42bc1 = $(`<div id="html_7dd290eb69bf8a2e04982694e1f42bc1" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_0121c85d4492580ac42af107e6b4b999.setContent(html_7dd290eb69bf8a2e04982694e1f42bc1);
+            
+        
+
+        marker_57ca10dfd01846a4b74c2ab90ce0119b.bindPopup(popup_0121c85d4492580ac42af107e6b4b999)
+        ;
+
+        
+    
+    
+            var marker_50cd53de2cc12361a31565908403f832 = L.marker(
+                [40.653378, -73.90658],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_6e0625437063d17d6722cd879df16137 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_50cd53de2cc12361a31565908403f832.setIcon(icon_6e0625437063d17d6722cd879df16137);
+        
+    
+        var popup_a76346a2ea08d187d514dd693a3cc2a6 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d395eadbdfa3c0deeadbb569366ea197 = $(`<div id="html_d395eadbdfa3c0deeadbb569366ea197" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_a76346a2ea08d187d514dd693a3cc2a6.setContent(html_d395eadbdfa3c0deeadbb569366ea197);
+            
+        
+
+        marker_50cd53de2cc12361a31565908403f832.bindPopup(popup_a76346a2ea08d187d514dd693a3cc2a6)
+        ;
+
+        
+    
+    
+            var marker_88b5a93467441c4df2ae64f36d3afcb4 = L.marker(
+                [40.69993, -73.96188],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_e98cea4329d5dc29f25f2843d69b88b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_88b5a93467441c4df2ae64f36d3afcb4.setIcon(icon_e98cea4329d5dc29f25f2843d69b88b1);
+        
+    
+        var popup_633aade5628860d844dc20d0d6da81c5 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_31b7b251974e7c51330d74e58dfd6149 = $(`<div id="html_31b7b251974e7c51330d74e58dfd6149" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2022 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_633aade5628860d844dc20d0d6da81c5.setContent(html_31b7b251974e7c51330d74e58dfd6149);
+            
+        
+
+        marker_88b5a93467441c4df2ae64f36d3afcb4.bindPopup(popup_633aade5628860d844dc20d0d6da81c5)
+        ;
+
+        
+    
+    
+            var marker_919980a44de04f4853d361ea5ff760cb = L.marker(
+                [40.596104, -73.760414],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b53625ce599523eb30802549ad693409 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_919980a44de04f4853d361ea5ff760cb.setIcon(icon_b53625ce599523eb30802549ad693409);
+        
+    
+        var popup_0c00b7c66725b8d6380aaee7d11a6656 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c13c667001b11c9239eb540f2b79dadc = $(`<div id="html_c13c667001b11c9239eb540f2b79dadc" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_0c00b7c66725b8d6380aaee7d11a6656.setContent(html_c13c667001b11c9239eb540f2b79dadc);
+            
+        
+
+        marker_919980a44de04f4853d361ea5ff760cb.bindPopup(popup_0c00b7c66725b8d6380aaee7d11a6656)
+        ;
+
+        
+    
+    
+            var marker_72492b44ef4c3396ac6f107798c0c8a3 = L.marker(
+                [40.88698, -73.84745],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_8731289227d7d17be1c9a47c3676b5c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_72492b44ef4c3396ac6f107798c0c8a3.setIcon(icon_8731289227d7d17be1c9a47c3676b5c0);
+        
+    
+        var popup_b16f3f3c363077645e95edd06fe4de07 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_5c4e6b56521d5e1496083f86c14a682b = $(`<div id="html_5c4e6b56521d5e1496083f86c14a682b" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_b16f3f3c363077645e95edd06fe4de07.setContent(html_5c4e6b56521d5e1496083f86c14a682b);
+            
+        
+
+        marker_72492b44ef4c3396ac6f107798c0c8a3.bindPopup(popup_b16f3f3c363077645e95edd06fe4de07)
+        ;
+
+        
+    
+    
+            var marker_ba30facf5b59885622a00173cc4f296b = L.marker(
+                [40.84013, -73.8802991],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_11027ea5c5048ff14a46a6b3e4863cb3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_ba30facf5b59885622a00173cc4f296b.setIcon(icon_11027ea5c5048ff14a46a6b3e4863cb3);
+        
+    
+        var popup_1f18324e409a58d4e3563885398126ca = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_04b24a7ce497021ae7dfd6b32ff9e133 = $(`<div id="html_04b24a7ce497021ae7dfd6b32ff9e133" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_1f18324e409a58d4e3563885398126ca.setContent(html_04b24a7ce497021ae7dfd6b32ff9e133);
+            
+        
+
+        marker_ba30facf5b59885622a00173cc4f296b.bindPopup(popup_1f18324e409a58d4e3563885398126ca)
+        ;
+
+        
+    
+    
+            var marker_6bbee919633b62d69bf27ef4009a89d6 = L.marker(
+                [40.662175, -73.9537014],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_e2437d9ad5145855632a2f5f8ddbbb94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_6bbee919633b62d69bf27ef4009a89d6.setIcon(icon_e2437d9ad5145855632a2f5f8ddbbb94);
+        
+    
+        var popup_14531f7710a770bcf33d22eff9127e9d = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_5659b2a3bb402b5e8a77ae5875d5b7a6 = $(`<div id="html_5659b2a3bb402b5e8a77ae5875d5b7a6" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_14531f7710a770bcf33d22eff9127e9d.setContent(html_5659b2a3bb402b5e8a77ae5875d5b7a6);
+            
+        
+
+        marker_6bbee919633b62d69bf27ef4009a89d6.bindPopup(popup_14531f7710a770bcf33d22eff9127e9d)
+        ;
+
+        
+    
+    
+            var marker_7a8de46a1548076c8747adbb271f6977 = L.marker(
+                [40.86549, -73.8644612],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_f6924a437d13aa87a37a4aa9e2041faa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_7a8de46a1548076c8747adbb271f6977.setIcon(icon_f6924a437d13aa87a37a4aa9e2041faa);
+        
+    
+        var popup_b4cb6ff1eab39c04ec30c042f2ede2e2 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_11375c11014c4ebde16e972b38b4a381 = $(`<div id="html_11375c11014c4ebde16e972b38b4a381" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_b4cb6ff1eab39c04ec30c042f2ede2e2.setContent(html_11375c11014c4ebde16e972b38b4a381);
+            
+        
+
+        marker_7a8de46a1548076c8747adbb271f6977.bindPopup(popup_b4cb6ff1eab39c04ec30c042f2ede2e2)
+        ;
+
+        
+    
+    
+            var marker_850106e8dd216c6e820910596a391051 = L.marker(
+                [40.703293, -73.7961],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b140d49a8bb2ab5c103b66d1dd439494 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_850106e8dd216c6e820910596a391051.setIcon(icon_b140d49a8bb2ab5c103b66d1dd439494);
+        
+    
+        var popup_8b14f176d07e3472b50c79dab932707c = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d7645fb88dfacb3d932aa545dca55e44 = $(`<div id="html_d7645fb88dfacb3d932aa545dca55e44" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_8b14f176d07e3472b50c79dab932707c.setContent(html_d7645fb88dfacb3d932aa545dca55e44);
+            
+        
+
+        marker_850106e8dd216c6e820910596a391051.bindPopup(popup_8b14f176d07e3472b50c79dab932707c)
+        ;
+
+        
+    
+    
+            var marker_2866a1b16a0b4f13cbc7a08dc81db6ac = L.marker(
+                [40.836502, -73.825165],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_24937ee0fa105aa1bdab9e3922e0d739 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_2866a1b16a0b4f13cbc7a08dc81db6ac.setIcon(icon_24937ee0fa105aa1bdab9e3922e0d739);
+        
+    
+        var popup_20cc7d4420fc97fbcc5b1693e0d084fb = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_79c85ce74006a6466625672ad538d0e0 = $(`<div id="html_79c85ce74006a6466625672ad538d0e0" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_20cc7d4420fc97fbcc5b1693e0d084fb.setContent(html_79c85ce74006a6466625672ad538d0e0);
+            
+        
+
+        marker_2866a1b16a0b4f13cbc7a08dc81db6ac.bindPopup(popup_20cc7d4420fc97fbcc5b1693e0d084fb)
+        ;
+
+        
+    
+    
+            var marker_c5b6114b8d570c18822a530063c508b7 = L.marker(
+                [40.8531739, -73.8896342],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_2bb79b9f08aced7da559ddabbe19daad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_c5b6114b8d570c18822a530063c508b7.setIcon(icon_2bb79b9f08aced7da559ddabbe19daad);
+        
+    
+        var popup_dadc64798f82f8a1b44687b055d189a8 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_af099559808f32908e5a657e4656a661 = $(`<div id="html_af099559808f32908e5a657e4656a661" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_dadc64798f82f8a1b44687b055d189a8.setContent(html_af099559808f32908e5a657e4656a661);
+            
+        
+
+        marker_c5b6114b8d570c18822a530063c508b7.bindPopup(popup_dadc64798f82f8a1b44687b055d189a8)
+        ;
+
+        
+    
+    
+            var marker_f45a1898382caa2ce6030f84860bcd8a = L.marker(
+                [40.763233, -73.992874],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_16b66142e17b280e009920acc72a5111 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_f45a1898382caa2ce6030f84860bcd8a.setIcon(icon_16b66142e17b280e009920acc72a5111);
+        
+    
+        var popup_e6b31c67ecaf9a49936ff0cad677b07e = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_684c102604f72081f7a80c4f828d5cf9 = $(`<div id="html_684c102604f72081f7a80c4f828d5cf9" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_e6b31c67ecaf9a49936ff0cad677b07e.setContent(html_684c102604f72081f7a80c4f828d5cf9);
+            
+        
+
+        marker_f45a1898382caa2ce6030f84860bcd8a.bindPopup(popup_e6b31c67ecaf9a49936ff0cad677b07e)
+        ;
+
+        
+    
+    
+            var marker_7a2c19cfee9587233225e8ac63b4087f = L.marker(
+                [40.841652, -73.87233],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_31814a9dd802b5785a285467bc72af9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_7a2c19cfee9587233225e8ac63b4087f.setIcon(icon_31814a9dd802b5785a285467bc72af9e);
+        
+    
+        var popup_221d013f782c7ceee49bfdd0999bb231 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c84383868c913c1a7c86fc14a22b3a8b = $(`<div id="html_c84383868c913c1a7c86fc14a22b3a8b" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_221d013f782c7ceee49bfdd0999bb231.setContent(html_c84383868c913c1a7c86fc14a22b3a8b);
+            
+        
+
+        marker_7a2c19cfee9587233225e8ac63b4087f.bindPopup(popup_221d013f782c7ceee49bfdd0999bb231)
+        ;
+
+        
+    
+    
+            var marker_3e91671f8c21c9ca526c2ff25eb4f3d9 = L.marker(
+                [40.79931, -73.943245],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_10628e2642c4dbbb994f462de000d4a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_3e91671f8c21c9ca526c2ff25eb4f3d9.setIcon(icon_10628e2642c4dbbb994f462de000d4a6);
+        
+    
+        var popup_d31eea7de45ebfca484bce7d97b641a0 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c248d8a6ea1884c47585561118d3ae16 = $(`<div id="html_c248d8a6ea1884c47585561118d3ae16" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_d31eea7de45ebfca484bce7d97b641a0.setContent(html_c248d8a6ea1884c47585561118d3ae16);
+            
+        
+
+        marker_3e91671f8c21c9ca526c2ff25eb4f3d9.bindPopup(popup_d31eea7de45ebfca484bce7d97b641a0)
+        ;
+
+        
+    
+    
+            var marker_2d1dd30363073b27ebc54535b9052b91 = L.marker(
+                [40.7265632, -73.8380134],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_c4d863d207ce5f7c33f644368b138d90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_2d1dd30363073b27ebc54535b9052b91.setIcon(icon_c4d863d207ce5f7c33f644368b138d90);
+        
+    
+        var popup_1fe43ab7e6158b6b273c31fd2583afd2 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c68f36c554d178bcff972577b7f22802 = $(`<div id="html_c68f36c554d178bcff972577b7f22802" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_1fe43ab7e6158b6b273c31fd2583afd2.setContent(html_c68f36c554d178bcff972577b7f22802);
+            
+        
+
+        marker_2d1dd30363073b27ebc54535b9052b91.bindPopup(popup_1fe43ab7e6158b6b273c31fd2583afd2)
+        ;
+
+        
+    
+    
+            var marker_138a2627e3bb9286e2779646fbea7a33 = L.marker(
+                [40.826427, -73.950455],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_27a13c2d2ddca27ab2ccd5117911b24c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_138a2627e3bb9286e2779646fbea7a33.setIcon(icon_27a13c2d2ddca27ab2ccd5117911b24c);
+        
+    
+        var popup_bfd8fb3b91dd236cbe9e0c04b61c1bbd = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c46638d9941ca88fd3bc8abb46da69b1 = $(`<div id="html_c46638d9941ca88fd3bc8abb46da69b1" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_bfd8fb3b91dd236cbe9e0c04b61c1bbd.setContent(html_c46638d9941ca88fd3bc8abb46da69b1);
+            
+        
+
+        marker_138a2627e3bb9286e2779646fbea7a33.bindPopup(popup_bfd8fb3b91dd236cbe9e0c04b61c1bbd)
+        ;
+
+        
+    
+    
+            var marker_2ea5fedaf9c32254195b9125c2170f8f = L.marker(
+                [40.785095, -73.97691],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_370e8eccf881c9084d8e465facbfaea7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_2ea5fedaf9c32254195b9125c2170f8f.setIcon(icon_370e8eccf881c9084d8e465facbfaea7);
+        
+    
+        var popup_950a703806c1e5416c8f085ad1fd4f5c = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_8da4896751feba198514f63be31606f9 = $(`<div id="html_8da4896751feba198514f63be31606f9" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_950a703806c1e5416c8f085ad1fd4f5c.setContent(html_8da4896751feba198514f63be31606f9);
+            
+        
+
+        marker_2ea5fedaf9c32254195b9125c2170f8f.bindPopup(popup_950a703806c1e5416c8f085ad1fd4f5c)
+        ;
+
+        
+    
+    
+            var marker_8311a7cfa63959608895ba4f84edb416 = L.marker(
+                [40.8284993, -73.9377806],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b63c2c29bee8ebce4c5072ca34edc04f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_8311a7cfa63959608895ba4f84edb416.setIcon(icon_b63c2c29bee8ebce4c5072ca34edc04f);
+        
+    
+        var popup_80e4445e899ecf5474bc862a58a4dc0a = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_cb6618e03711b5ac423454ccc03b1df4 = $(`<div id="html_cb6618e03711b5ac423454ccc03b1df4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_80e4445e899ecf5474bc862a58a4dc0a.setContent(html_cb6618e03711b5ac423454ccc03b1df4);
+            
+        
+
+        marker_8311a7cfa63959608895ba4f84edb416.bindPopup(popup_80e4445e899ecf5474bc862a58a4dc0a)
+        ;
+
+        
+    
+    
+            var marker_ad1991cac263c24c5227c568adda922e = L.marker(
+                [40.69083, -73.78706],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_2edc22be9a595a47802822883ac70665 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_ad1991cac263c24c5227c568adda922e.setIcon(icon_2edc22be9a595a47802822883ac70665);
+        
+    
+        var popup_3982092b65fb0c85471b73d30724b674 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_e60735b9b734afc70dd5bc4dc2c0c0f4 = $(`<div id="html_e60735b9b734afc70dd5bc4dc2c0c0f4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_3982092b65fb0c85471b73d30724b674.setContent(html_e60735b9b734afc70dd5bc4dc2c0c0f4);
+            
+        
+
+        marker_ad1991cac263c24c5227c568adda922e.bindPopup(popup_3982092b65fb0c85471b73d30724b674)
+        ;
+
+        
+    
+    
+            var marker_a03e9893282b5d74d22cf893246934d6 = L.marker(
+                [40.646442, -74.07884],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_39e38bf6823ae3e9ecb30613538b4464 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_a03e9893282b5d74d22cf893246934d6.setIcon(icon_39e38bf6823ae3e9ecb30613538b4464);
+        
+    
+        var popup_322852a2d98d4fed719a329388ac7810 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_6bf183a64557e9e7e768122099386195 = $(`<div id="html_6bf183a64557e9e7e768122099386195" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2022 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_322852a2d98d4fed719a329388ac7810.setContent(html_6bf183a64557e9e7e768122099386195);
+            
+        
+
+        marker_a03e9893282b5d74d22cf893246934d6.bindPopup(popup_322852a2d98d4fed719a329388ac7810)
+        ;
+
+        
+    
+    
+            var marker_cc2dffcc74b7971d0dc4062685d7ff5e = L.marker(
+                [40.73136, -73.98257],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_3f5dc359347c707ddfe1b3cb6e3735b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_cc2dffcc74b7971d0dc4062685d7ff5e.setIcon(icon_3f5dc359347c707ddfe1b3cb6e3735b2);
+        
+    
+        var popup_2fefe6bea3bd3a63fff86da55cdbda68 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_15a8061a48a8eb66c5897cca39de0cfb = $(`<div id="html_15a8061a48a8eb66c5897cca39de0cfb" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_2fefe6bea3bd3a63fff86da55cdbda68.setContent(html_15a8061a48a8eb66c5897cca39de0cfb);
+            
+        
+
+        marker_cc2dffcc74b7971d0dc4062685d7ff5e.bindPopup(popup_2fefe6bea3bd3a63fff86da55cdbda68)
+        ;
+
+        
+    
+    
+            var marker_e7241fdba1c4ba42472ef6aa9eff2586 = L.marker(
+                [40.83959, -73.88268],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_85913f529e9f7ea708b5c5ab07149242 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_e7241fdba1c4ba42472ef6aa9eff2586.setIcon(icon_85913f529e9f7ea708b5c5ab07149242);
+        
+    
+        var popup_51e9a09ae39ec758ce4740c5624a9998 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_ebdd75dbcb08d857045e340aabbac617 = $(`<div id="html_ebdd75dbcb08d857045e340aabbac617" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2022 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_51e9a09ae39ec758ce4740c5624a9998.setContent(html_ebdd75dbcb08d857045e340aabbac617);
+            
+        
+
+        marker_e7241fdba1c4ba42472ef6aa9eff2586.bindPopup(popup_51e9a09ae39ec758ce4740c5624a9998)
+        ;
+
+        
+    
+    
+            var marker_df5e6a16ab26a1ccc19d4b8caa9c7ee3 = L.marker(
+                [40.65474, -73.90693],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_9d2145597d1fd989d91e3f4a62dcd264 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_df5e6a16ab26a1ccc19d4b8caa9c7ee3.setIcon(icon_9d2145597d1fd989d91e3f4a62dcd264);
+        
+    
+        var popup_e211ba2eef046e0fd99c40f303a537d7 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3df82f5022d255a64791c554d82ad4a4 = $(`<div id="html_3df82f5022d255a64791c554d82ad4a4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_e211ba2eef046e0fd99c40f303a537d7.setContent(html_3df82f5022d255a64791c554d82ad4a4);
+            
+        
+
+        marker_df5e6a16ab26a1ccc19d4b8caa9c7ee3.bindPopup(popup_e211ba2eef046e0fd99c40f303a537d7)
+        ;
+
+        
+    
+    
+            var marker_e71c31249320bea72a215bfb82664ab1 = L.marker(
+                [40.641537, -73.93899],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_f90b67ab1875efbcde75eb3da32ba428 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_e71c31249320bea72a215bfb82664ab1.setIcon(icon_f90b67ab1875efbcde75eb3da32ba428);
+        
+    
+        var popup_651baf546dec7512e667047d43e4b604 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c3fc0291bd088dea8192580d2c5ffca4 = $(`<div id="html_c3fc0291bd088dea8192580d2c5ffca4" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 13.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_651baf546dec7512e667047d43e4b604.setContent(html_c3fc0291bd088dea8192580d2c5ffca4);
+            
+        
+
+        marker_e71c31249320bea72a215bfb82664ab1.bindPopup(popup_651baf546dec7512e667047d43e4b604)
+        ;
+
+        
+    
+    
+            var marker_8a252686d2de37ea66593c0cbfb16de7 = L.marker(
+                [40.8173878, -73.922758],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_1397a42628eacac7c9ddd6cf472c8f20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_8a252686d2de37ea66593c0cbfb16de7.setIcon(icon_1397a42628eacac7c9ddd6cf472c8f20);
+        
+    
+        var popup_e30e4c127e69a908b50adb970ec77228 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_14fea4f18c1f8cac7b6753fd11945d85 = $(`<div id="html_14fea4f18c1f8cac7b6753fd11945d85" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_e30e4c127e69a908b50adb970ec77228.setContent(html_14fea4f18c1f8cac7b6753fd11945d85);
+            
+        
+
+        marker_8a252686d2de37ea66593c0cbfb16de7.bindPopup(popup_e30e4c127e69a908b50adb970ec77228)
+        ;
+
+        
+    
+    
+            var marker_52c1efe232f55e51fcbd3f7b635acfde = L.marker(
+                [40.80623, -73.91206],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_5b1f81561e71299a23793e78dd78b7d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_52c1efe232f55e51fcbd3f7b635acfde.setIcon(icon_5b1f81561e71299a23793e78dd78b7d8);
+        
+    
+        var popup_050b748d893dc6f87d524e9141696774 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_36b0c6501321bf8e65faccd2fac9658f = $(`<div id="html_36b0c6501321bf8e65faccd2fac9658f" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_050b748d893dc6f87d524e9141696774.setContent(html_36b0c6501321bf8e65faccd2fac9658f);
+            
+        
+
+        marker_52c1efe232f55e51fcbd3f7b635acfde.bindPopup(popup_050b748d893dc6f87d524e9141696774)
+        ;
+
+        
+    
+    
+            var marker_39292cf2185eed45b76919234830dae6 = L.marker(
+                [40.691666, -73.76239],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_45c5ecebd87f0f8e20657ca2a4ac8289 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_39292cf2185eed45b76919234830dae6.setIcon(icon_45c5ecebd87f0f8e20657ca2a4ac8289);
+        
+    
+        var popup_aa068729361e2dc26391283bf20c4366 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_dbd6392950ac14f5078c2ac30dc7b893 = $(`<div id="html_dbd6392950ac14f5078c2ac30dc7b893" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_aa068729361e2dc26391283bf20c4366.setContent(html_dbd6392950ac14f5078c2ac30dc7b893);
+            
+        
+
+        marker_39292cf2185eed45b76919234830dae6.bindPopup(popup_aa068729361e2dc26391283bf20c4366)
+        ;
+
+        
+    
+    
+            var marker_696210ca3c8b4a2b4c995d853d54686b = L.marker(
+                [40.66644, -73.95361],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_6b4f05a71df3e77aaf403c085cf5579e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_696210ca3c8b4a2b4c995d853d54686b.setIcon(icon_6b4f05a71df3e77aaf403c085cf5579e);
+        
+    
+        var popup_e569d6dcbe51fa24efb98706c4a4f7f3 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3192b2683b10bd101df46263d0791f2c = $(`<div id="html_3192b2683b10bd101df46263d0791f2c" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_e569d6dcbe51fa24efb98706c4a4f7f3.setContent(html_3192b2683b10bd101df46263d0791f2c);
+            
+        
+
+        marker_696210ca3c8b4a2b4c995d853d54686b.bindPopup(popup_e569d6dcbe51fa24efb98706c4a4f7f3)
+        ;
+
+        
+    
+    
+            var marker_95713a592cb5c6d23b264788d7941839 = L.marker(
+                [40.67308, -73.91124],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_4c5a7fa2ee5f354b3f547c23d7db9719 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_95713a592cb5c6d23b264788d7941839.setIcon(icon_4c5a7fa2ee5f354b3f547c23d7db9719);
+        
+    
+        var popup_26602f4b0abded309d58507dc33772df = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3b0dfe549b9ac7995e7161d2e94e80a1 = $(`<div id="html_3b0dfe549b9ac7995e7161d2e94e80a1" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_26602f4b0abded309d58507dc33772df.setContent(html_3b0dfe549b9ac7995e7161d2e94e80a1);
+            
+        
+
+        marker_95713a592cb5c6d23b264788d7941839.bindPopup(popup_26602f4b0abded309d58507dc33772df)
+        ;
+
+        
+    
+    
+            var marker_3b405da27c2b5856ac1210ea9c04415a = L.marker(
+                [40.829533, -73.84733],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_fd07d2491ae36ad62da723bd4d21c98b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_3b405da27c2b5856ac1210ea9c04415a.setIcon(icon_fd07d2491ae36ad62da723bd4d21c98b);
+        
+    
+        var popup_f0ae7c3ffd38157aa8aa5805f71a2f82 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_88e25d7fbe49eb5b386be81cf297eac7 = $(`<div id="html_88e25d7fbe49eb5b386be81cf297eac7" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_f0ae7c3ffd38157aa8aa5805f71a2f82.setContent(html_88e25d7fbe49eb5b386be81cf297eac7);
+            
+        
+
+        marker_3b405da27c2b5856ac1210ea9c04415a.bindPopup(popup_f0ae7c3ffd38157aa8aa5805f71a2f82)
+        ;
+
+        
+    
+    
+            var marker_384440cd9124a81933620b0435eab7a2 = L.marker(
+                [40.6842783, -73.7830147],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_9cc1c7e505e3dd13355ab8e234e7f2d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_384440cd9124a81933620b0435eab7a2.setIcon(icon_9cc1c7e505e3dd13355ab8e234e7f2d1);
+        
+    
+        var popup_29128c40c67e268030a22fa1be0147ff = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3b07a936a908aea80d270ae6e8f11fbf = $(`<div id="html_3b07a936a908aea80d270ae6e8f11fbf" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2014 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_29128c40c67e268030a22fa1be0147ff.setContent(html_3b07a936a908aea80d270ae6e8f11fbf);
+            
+        
+
+        marker_384440cd9124a81933620b0435eab7a2.bindPopup(popup_29128c40c67e268030a22fa1be0147ff)
+        ;
+
+        
+    
+    
+            var marker_44c962ccea7292f9d5ac750e19f0d223 = L.marker(
+                [40.6987734, -73.9223293],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_4899e3d2cbdf3a518eea41eb9aaa3683 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_44c962ccea7292f9d5ac750e19f0d223.setIcon(icon_4899e3d2cbdf3a518eea41eb9aaa3683);
+        
+    
+        var popup_e1528fac22c47d7d2e50da2fbbeed644 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_d9da9e2f9649cbf685267f3fb8d45ebc = $(`<div id="html_d9da9e2f9649cbf685267f3fb8d45ebc" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_e1528fac22c47d7d2e50da2fbbeed644.setContent(html_d9da9e2f9649cbf685267f3fb8d45ebc);
+            
+        
+
+        marker_44c962ccea7292f9d5ac750e19f0d223.bindPopup(popup_e1528fac22c47d7d2e50da2fbbeed644)
+        ;
+
+        
+    
+    
+            var marker_aab37950376588d0e282bc3b153b0c92 = L.marker(
+                [40.8077723, -73.9454833],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_abb57cb54610b497dd952c0ab16fccc1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_aab37950376588d0e282bc3b153b0c92.setIcon(icon_abb57cb54610b497dd952c0ab16fccc1);
+        
+    
+        var popup_b194c2bce1bd80cb7acdde091d4e4c5c = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_f8c1044bd407f06bd29c740fe08d856f = $(`<div id="html_f8c1044bd407f06bd29c740fe08d856f" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2015 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_b194c2bce1bd80cb7acdde091d4e4c5c.setContent(html_f8c1044bd407f06bd29c740fe08d856f);
+            
+        
+
+        marker_aab37950376588d0e282bc3b153b0c92.bindPopup(popup_b194c2bce1bd80cb7acdde091d4e4c5c)
+        ;
+
+        
+    
+    
+            var marker_a999b67b0137335b68fe10aa352aa927 = L.marker(
+                [40.654533, -73.860916],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_772f3233cfdd0fbb3c4b20f7c916dd56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_a999b67b0137335b68fe10aa352aa927.setIcon(icon_772f3233cfdd0fbb3c4b20f7c916dd56);
+        
+    
+        var popup_a31cb01114baaeac1ed18885c61ee31d = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_7e55535c49a6cdbe907c322b057677cd = $(`<div id="html_7e55535c49a6cdbe907c322b057677cd" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_a31cb01114baaeac1ed18885c61ee31d.setContent(html_7e55535c49a6cdbe907c322b057677cd);
+            
+        
+
+        marker_a999b67b0137335b68fe10aa352aa927.bindPopup(popup_a31cb01114baaeac1ed18885c61ee31d)
+        ;
+
+        
+    
+    
+            var marker_c55d14eeae108c44fe82a6a31f50f750 = L.marker(
+                [40.751442, -73.97606],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_b25b1260f891b2231c6a365e6d6b580e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_c55d14eeae108c44fe82a6a31f50f750.setIcon(icon_b25b1260f891b2231c6a365e6d6b580e);
+        
+    
+        var popup_7a46a26c0c595c8274388f6ddb7ae689 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_81b57b82346c6a79698a0422d5384daa = $(`<div id="html_81b57b82346c6a79698a0422d5384daa" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_7a46a26c0c595c8274388f6ddb7ae689.setContent(html_81b57b82346c6a79698a0422d5384daa);
+            
+        
+
+        marker_c55d14eeae108c44fe82a6a31f50f750.bindPopup(popup_7a46a26c0c595c8274388f6ddb7ae689)
+        ;
+
+        
+    
+    
+            var marker_14c4dc1b4f619816ca8e92c07a574ec9 = L.marker(
+                [40.85391, -73.88364],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_3dcf1779673c780bbb31847a891802da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_14c4dc1b4f619816ca8e92c07a574ec9.setIcon(icon_3dcf1779673c780bbb31847a891802da);
+        
+    
+        var popup_8f3cd8c9b16ceae8ac519f61b6aae053 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_b8b0f41bd866344645485db73a6df44e = $(`<div id="html_b8b0f41bd866344645485db73a6df44e" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_8f3cd8c9b16ceae8ac519f61b6aae053.setContent(html_b8b0f41bd866344645485db73a6df44e);
+            
+        
+
+        marker_14c4dc1b4f619816ca8e92c07a574ec9.bindPopup(popup_8f3cd8c9b16ceae8ac519f61b6aae053)
+        ;
+
+        
+    
+    
+            var marker_99530815200ee0e8e25145460cda88a7 = L.marker(
+                [40.78318, -73.94362],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_e4003bf3fba5d16df518ad86c26ab7ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_99530815200ee0e8e25145460cda88a7.setIcon(icon_e4003bf3fba5d16df518ad86c26ab7ed);
+        
+    
+        var popup_1ced208dfcbd234501da6fbb340a1ae6 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_dfbb58aa017707635389163398e35047 = $(`<div id="html_dfbb58aa017707635389163398e35047" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2016 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_1ced208dfcbd234501da6fbb340a1ae6.setContent(html_dfbb58aa017707635389163398e35047);
+            
+        
+
+        marker_99530815200ee0e8e25145460cda88a7.bindPopup(popup_1ced208dfcbd234501da6fbb340a1ae6)
+        ;
+
+        
+    
+    
+            var marker_2b83656e1ec68f37cc165ce6f8febc68 = L.marker(
+                [40.77926, -73.81932],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_235f92e6070b4a76f4686f613d81275b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_2b83656e1ec68f37cc165ce6f8febc68.setIcon(icon_235f92e6070b4a76f4686f613d81275b);
+        
+    
+        var popup_0bfd512f0c5f602b87c4ab60c4f77fd4 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_3b42277c92c36b9592aef8768639dacd = $(`<div id="html_3b42277c92c36b9592aef8768639dacd" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_0bfd512f0c5f602b87c4ab60c4f77fd4.setContent(html_3b42277c92c36b9592aef8768639dacd);
+            
+        
+
+        marker_2b83656e1ec68f37cc165ce6f8febc68.bindPopup(popup_0bfd512f0c5f602b87c4ab60c4f77fd4)
+        ;
+
+        
+    
+    
+            var marker_c256c81bf53a2b6052d22d126ff9fc38 = L.marker(
+                [40.837654, -73.89997],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_7f76cb7cca69cbf265973a5f2c154740 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_c256c81bf53a2b6052d22d126ff9fc38.setIcon(icon_7f76cb7cca69cbf265973a5f2c154740);
+        
+    
+        var popup_b7e5366b1df4a9344a2a8649e765b8ec = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_992a9082a91aafc4d945db13b193c23f = $(`<div id="html_992a9082a91aafc4d945db13b193c23f" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2019 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_b7e5366b1df4a9344a2a8649e765b8ec.setContent(html_992a9082a91aafc4d945db13b193c23f);
+            
+        
+
+        marker_c256c81bf53a2b6052d22d126ff9fc38.bindPopup(popup_b7e5366b1df4a9344a2a8649e765b8ec)
+        ;
+
+        
+    
+    
+            var marker_a0e9ad9b034db9454bf4d032d55c8590 = L.marker(
+                [40.716114, -73.81191],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_826127d85999a68893408bac18eaf969 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_a0e9ad9b034db9454bf4d032d55c8590.setIcon(icon_826127d85999a68893408bac18eaf969);
+        
+    
+        var popup_d79306156c0764694f0f1dc1ac3b2577 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_afb4ccf3e6db43ade86efbe5c681348f = $(`<div id="html_afb4ccf3e6db43ade86efbe5c681348f" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2018 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_d79306156c0764694f0f1dc1ac3b2577.setContent(html_afb4ccf3e6db43ade86efbe5c681348f);
+            
+        
+
+        marker_a0e9ad9b034db9454bf4d032d55c8590.bindPopup(popup_d79306156c0764694f0f1dc1ac3b2577)
+        ;
+
+        
+    
+    
+            var marker_41c787a1fce520955e81ff27d5c4639e = L.marker(
+                [40.729046, -74.01073],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_1b3d570ded45ad118004a197c5be1123 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_41c787a1fce520955e81ff27d5c4639e.setIcon(icon_1b3d570ded45ad118004a197c5be1123);
+        
+    
+        var popup_04e3b5a7ac6eac323edae9d4fd9e2685 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_8296e0ad971677c55ab4c008834ad2fe = $(`<div id="html_8296e0ad971677c55ab4c008834ad2fe" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2017 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_04e3b5a7ac6eac323edae9d4fd9e2685.setContent(html_8296e0ad971677c55ab4c008834ad2fe);
+            
+        
+
+        marker_41c787a1fce520955e81ff27d5c4639e.bindPopup(popup_04e3b5a7ac6eac323edae9d4fd9e2685)
+        ;
+
+        
+    
+    
+            var marker_0be4ecfec757599d79f77539004b035a = L.marker(
+                [40.6524639, -73.9228481],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_2441aaadec41390aa745d6803d011af1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_0be4ecfec757599d79f77539004b035a.setIcon(icon_2441aaadec41390aa745d6803d011af1);
+        
+    
+        var popup_eb29511cd380ba177a5b9f90199de73c = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_ae3125ff12eb46ac824ac3c2cc67fe68 = $(`<div id="html_ae3125ff12eb46ac824ac3c2cc67fe68" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2013 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_eb29511cd380ba177a5b9f90199de73c.setContent(html_ae3125ff12eb46ac824ac3c2cc67fe68);
+            
+        
+
+        marker_0be4ecfec757599d79f77539004b035a.bindPopup(popup_eb29511cd380ba177a5b9f90199de73c)
+        ;
+
+        
+    
+    
+            var marker_476a8d5e81e85920236b2134bb178cb2 = L.marker(
+                [40.820187, -73.890686],
+                {}
+            ).addTo(map_b7641d2b89efcfc50fe5336af025d515);
+        
+    
+            var icon_5068e8232302f65c5c40f43013ec8041 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_476a8d5e81e85920236b2134bb178cb2.setIcon(icon_5068e8232302f65c5c40f43013ec8041);
+        
+    
+        var popup_a6436f53aba4f4643e6897358f622a50 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_51ccc6820cf146b71bb07e795de8c890 = $(`<div id="html_51ccc6820cf146b71bb07e795de8c890" style="width: 100.0%; height: 100.0%;"><strong> Year: </strong>2023 <br><strong>Vehicle:</strong> sedan <br><strong> Persons Injured:</strong> 12.0<strong>  <br> Persons Killed: 0.0 </strong> <br> <strong> Accident Factors: </strong> <li> driver inattention/distraction <li> driver inattention/distraction</div>`)[0];
+                popup_a6436f53aba4f4643e6897358f622a50.setContent(html_51ccc6820cf146b71bb07e795de8c890);
+            
+        
+
+        marker_476a8d5e81e85920236b2134bb178cb2.bindPopup(popup_a6436f53aba4f4643e6897358f622a50)
+        ;
+
+        
+    
+</script>
+</html>
