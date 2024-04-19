@@ -3,12 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>NYC Collisions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2, h5 {
+            color: #007bff;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .names {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .description {
+            margin-bottom: 0;
+        }
+        .card-content {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>New York City Collisions</h1>
 
     {% include 'navbar.html' %}
     
+    <section class="container">>
+        <h5 class="card-title">Group Members</h5>
+        <ul>
+            <li class="names"> Bibi Ally </li>
+            <li class="names">Jardel Mitchell</li>
+            <li class="names">Kiran Ramsingh</li>
+            <li class="names"> Vance Ragbirsingh</li>
+        </ul>
+        <br>
+        <h5 class="card-title">Group E [NYC Crasher] </h5>
+        <h5 class="card-content">Course Code: COMP3610</h5>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Description</h5>
+                        <dl class="description"> 
+                            <dt>Problem Statement</dt>
+                            <dd>Our goals were to find out what were the main causes of
+                            motor vehicle accidents in NYC? What would the frequency
+                            of accidents look like in the future? And how could we use this
+                            data to help people avoid motor vehicle collisions? The data
+                            was cleaned and visualized. Due to many unique locations,
+                            clustering was used to group close-by accidents, these clusters
+                            were then used to input data onto maps for better visualization.
+                            Then time-series analysis was conducted to predict future
+                            accidents.
+                            </dd>
+                        </dl>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>     
     
 </body>
 </html>

@@ -8,52 +8,120 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #007bff;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-title, .card-text {
+            color: #333;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        /* Additional styling for the navigation bar */
+        .navbar {
+            background-color: #007bff;
+            color: white;
+        }
+        .navbar-brand {
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
+        }
+    </style>
+
 </head>
 <body>
     <h1>Collision Analysis</h1>
 
-<!-- Render the navigation bar -->
-{% include 'navbar.html' %}
+    <!-- Render the navigation bar -->
+    {% include 'navbar.html' %}
 
-    <section id="Map">
-        <h2>Map</h2>
-        <p>Explore the map to see where collisions have occurred in New York City.</p>
-    </section>
-    <div class="accident_map">
-        <div id="mapid" style="height: 600px;">
-            {% include 'accident_map.html' %}
+    <section class="container">
+        <h2>Maps</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Map</h5>
+                        <p class="card-text">General Map of New York City</p>
+                        <a href="{{ url_for('nyc_map') }}" class="btn btn-primary">View map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Clustered Boroughs</h5>
+                        <p class="card-text">Explore the clustering map to see collisions grouped by borough.</p>
+                        <a href="{{ url_for('clusters') }}" class="btn btn-primary">Borough Map</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Heatmap</h5>
+                        <p class="card-text">Explore the heatmap to see the density of collisions in New York City.</p>
+                        <a href="{{ url_for('heatmap') }}" class="btn btn-primary">View Heatmap</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Clustering Map</h5>
+                        <p class="card-text">Explore the clustering map to see collisions grouped by borough.</p>
+                        <a href="{{ url_for('cluster') }}" class="btn btn-primary">View Clustering Map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Injury Map</h5>
+                        <p class="card-text">Explore the injury map to see the locations and details of accidents with injuries.</p>
+                        <a href="{{ url_for('injury_map') }}" class="btn btn-primary">View Injury Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </section>
+
     <!-- Render the EDA plots (you'll need to generate them and save them as HTML files) -->
     <!-- ... -->
 
-    <!-- <script>
-        var map = L.map('mapid').setView([40.7128, -74.0060], 13); // New York City coordinates
-    
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    
-        // Fetch the GeoJSON data from your Flask app
-        fetch('/map-data')
-            .then(response => response.json())
-            .then(data => {
-                L.geoJSON(data, {
-                    onEachFeature: function (feature, layer) {
-                        layer.bindPopup(
-                            `<strong>Vehicle:</strong> ${feature.properties.vehicle}<br>
-                            <strong>Persons Injured:</strong> ${feature.properties.injured}<br>
-                            <strong>Persons Killed:</strong> ${feature.properties.killed}<br>
-                            <strong>Accident Factors:</strong><br>
-                            - ${feature.properties.factor1}<br>
-                            - ${feature.properties.factor2}`
-                        );
-                    }
-                }).addTo(map);
-            });
-    </script>
-     -->
-
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
