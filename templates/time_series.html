@@ -47,9 +47,9 @@
         <h1>Time Series Analysis</h1>
 
         <h2>Affected Persons by Borough</h2>
-        <img src="{{ url_for('static', filename='affected.png') }}" alt="Affected Persons by Borough" class="img-fluid">
+        <img src="{{ url_for('static', filename='affected.png') }}" alt="Affected Persons by Borough" class="img-fluid" onclick="showDescription('affected_description')">
 
-        <dl>
+        <dl id="affected_description" style="display: none;">
             <dd>
                 This graph illustrates the number of affected persons by borough over the years from 2013 to 2023. Each line represents a different borough in New York City, and the y-axis indicates the number of affected individuals in thousands.
                 By examining the lines, you can compare the trends of affected persons across different boroughs. For instance, you can observe which boroughs experienced higher or lower numbers of affected individuals in specific years.
@@ -58,9 +58,9 @@
         </dl>
         
         <h2>Injured Persons by Borough</h2>
-        <img src="{{ url_for('static', filename='injured.png') }}" alt="Injured Persons by Borough" class="img-fluid">
+        <img src="{{ url_for('static', filename='injured.png') }}" alt="Injured Persons by Borough" class="img-fluid" onclick="showDescription('injured_description')">
 
-        <dl>
+        <dl id="injured_description" style="display: none;">
             <dd>
                 This graph depicts the number of injured persons by borough over a considerable time span, possibly spanning over a century. Each line represents a different borough in New York City, and the y-axis denotes the number of injured individuals in thousands
                 By examining the lines, you can compare the trends of injured persons across different boroughs over the years. For instance, you can analyze which boroughs experienced higher or lower numbers of injured individuals during specific periods.
@@ -69,9 +69,9 @@
         </dl>
 
         <h2>Killed Persons by Borough</h2>
-        <img src="{{ url_for('static', filename='killed.png') }}" alt="Killed Persons by Borough" class="img-fluid">
+        <img src="{{ url_for('static', filename='killed.png') }}" alt="Killed Persons by Borough" class="img-fluid" onclick="showDescription('killed_description')">
 
-        <dl>
+        <dl id="killed_description" style="display: none;">
             <dd>
                 Each line illustrates the trend of individuals killed over time for the respective borough. The fluctuations in the lines showcase variations in the number of fatalities over the extensive time period.
                 This graph provides a detailed visual representation of the data concerning the number of individuals killed in New York City crashes over a considerable duration, categorized by borough. It allows for comparisons and analysis of trends in fatalities across different boroughs over the extensive time period covered by the dataset.
@@ -188,6 +188,17 @@ Overall, these graphs provide insights into the performance of predictive models
             {% endfor %}
         </div>
     </div>
+
+    <script>
+        function showDescription(id) {
+        var description = document.getElementById(id);
+        if (description.style.display === "none") {
+            description.style.display = "block";
+        } else {
+            description.style.display = "none";
+        }
+    }
+    </script>
 
 </body>
 </html>
