@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Series Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .navbar {
+            background-color: #007bff;
+            color: white;
+        }
+        .navbar-brand {
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
+        }
+        .gallery-image {
+            margin-bottom: 15px;
+        }
+    table {
+        width: 100%; /* Ensure the table takes the full width of its container */
+        border-collapse: collapse; /* Collapse borders */
+        margin-bottom: 20px; /* Add some space below the table */
+    }
+    th, td {
+        border: 1px solid #ddd; /* Add a border to table cells */
+        padding: 8px; /* Add some padding inside the cells */
+    }
+    th {
+        background-color: #f2f2f2; /* Light grey background for headers */
+        color: #333; /* Dark text for headers */
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light grey background for even rows */
+    }
+    </style>
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <h1>Time Series Analysis</h1>
+
+        <h2>Affected Persons by Borough</h2>
+        <img src="{{ url_for('static', filename='affected.png') }}" alt="Affected Persons by Borough" class="img-fluid" onclick="showDescription('affected_description')">
+
+        <dl id="affected_description" style="display: none;">
+            <dd>
+                This graph illustrates the number of affected persons by borough over the years from 2013 to 2023. Each line represents a different borough in New York City, and the y-axis indicates the number of affected individuals in thousands.
+                By examining the lines, you can compare the trends of affected persons across different boroughs. For instance, you can observe which boroughs experienced higher or lower numbers of affected individuals in specific years.
+                Overall, the graph provides a visual representation of how the number of affected persons has changed over the years across different boroughs of New York City. It allows for comparisons and analysis of trends in each borough's data over the specified time period
+            </dd>
+        </dl>
+        
+        <h2>Injured Persons by Borough</h2>
+        <img src="{{ url_for('static', filename='injured.png') }}" alt="Injured Persons by Borough" class="img-fluid" onclick="showDescription('injured_description')">
+
+        <dl id="injured_description" style="display: none;">
+            <dd>
+                This graph depicts the number of injured persons by borough over a considerable time span, possibly spanning over a century. Each line represents a different borough in New York City, and the y-axis denotes the number of injured individuals in thousands
+                By examining the lines, you can compare the trends of injured persons across different boroughs over the years. For instance, you can analyze which boroughs experienced higher or lower numbers of injured individuals during specific periods.
+                this graph provides a comprehensive visual representation of how the number of injured persons has evolved over a long duration across various boroughs of New York City. It allows for comparisons and analysis of trends in each borough's data over the extensive time period covered.
+            </dd>
+        </dl>
+
+        <h2>Killed Persons by Borough</h2>
+        <img src="{{ url_for('static', filename='killed.png') }}" alt="Killed Persons by Borough" class="img-fluid" onclick="showDescription('killed_description')">
+
+        <dl id="killed_description" style="display: none;">
+            <dd>
+                Each line illustrates the trend of individuals killed over time for the respective borough. The fluctuations in the lines showcase variations in the number of fatalities over the extensive time period.
+                This graph provides a detailed visual representation of the data concerning the number of individuals killed in New York City crashes over a considerable duration, categorized by borough. It allows for comparisons and analysis of trends in fatalities across different boroughs over the extensive time period covered by the dataset.
+            </dd>
+        </dl>
+
+
+        <h2>Predictions</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Brooklyn</h3>
+                <img src="{{ url_for('static', filename='brook_predict.png') }}" alt="Brooklyn Prediction" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3>Queens</h3>
+                <img src="{{ url_for('static', filename='queens_predict.png') }}" alt="Queens Prediction" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Bronx</h3>
+                <img src="{{ url_for('static', filename='bronx_predict.png') }}" alt="Bronx Prediction" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3>Manhattan</h3>
+                <img src="{{ url_for('static', filename='manhattan_predict.png') }}" alt="Manhattan Prediction" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Staten Island</h3>
+                <img src="{{ url_for('static', filename='staten_predict.png') }}" alt="Staten Island Prediction" class="img-fluid">
+            </div>
+        </div>
+
+        <dl>
+            <dd>
+                These graphs depict the predicted versus actual number of affected individuals (possibly killed) in different boroughs of New York City over a considerable time span, likely spanning several decades. Each graph represents a specific borough, and it compares the predicted values with the actual observed values.
+
+Here's a detailed breakdown for each borough:
+
+Queens:
+This graph shows the predicted versus actual number of affected individuals in Queens.
+The x-axis represents the years, spanning from around 1970 to 2020.
+The y-axis denotes the number of affected individuals (possibly killed) in tens.
+The blue line represents the predicted values, while the orange line represents the actual observed values.
+The graph indicates fluctuations in both predicted and actual values over time. There are instances where the predicted and actual values align closely, while in other periods, there are noticeable differences.
+Bronx:
+Similar to the Queens graph, this one illustrates the predicted versus actual number of affected individuals in the Bronx.
+The x-axis represents the years, spanning from around 1970 to 2020.
+The y-axis indicates the number of affected individuals (possibly killed) in tens.
+The blue line represents the predicted values, and the orange line represents the actual observed values.
+Fluctuations in both predicted and actual values are observed over time, with periods of alignment and divergence.
+Brooklyn:
+This graph displays the predicted versus actual number of affected individuals in Brooklyn.
+The x-axis denotes the years, ranging from around 1970 to 2020.
+The y-axis represents the number of affected individuals (possibly killed) in tens.
+The blue line signifies the predicted values, while the orange line represents the actual observed values.
+Similar to the previous graphs, fluctuations in both predicted and actual values are visible over time.
+Manhattan:
+Lastly, this graph illustrates the predicted versus actual number of affected individuals in Manhattan.
+The x-axis indicates the years, spanning from around 1970 to 2020.
+The y-axis denotes the number of affected individuals (possibly killed) in tens.
+The blue line represents the predicted values, and the orange line represents the actual observed values.
+Fluctuations in both predicted and actual values can be observed over the years.
+Overall, these graphs provide insights into the performance of predictive models in estimating the number of affected individuals (possibly killed) in different boroughs of New York City over a long duration. They allow for comparisons between predicted and actual values, highlighting periods of accuracy and discrepancy in the predictions.
+            </dd>
+        </dl>
+
+    </div>
+
+    <div id="table-head">
+        <h1>Model Summary</h1>
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                {% for borough, summary in model_summaries.items() %}
+                    <div style="flex: 1 0 45%; margin-right: 20px;">
+
+                    <h2>{{ borough }}</h2>
+                    <table>
+                        <tr>
+                            <th>Dep. Variable</th>
+                            <td>{{ summary.get('Dep. Variable') }}</td>
+                        </tr>
+                        <tr>
+                            <th>No. Observations</th>
+                            <td>{{ summary.get('No. Observations') }}</td>
+                        </tr>
+                        <tr>
+                            <th>Model</th>
+                            <td>{{ summary.Model }}</td>
+                        </tr>
+                        <tr>
+                            <th>Log Likelihood</th>
+                            <td>{{ summary.get('Log Likelihood') }}</td>
+                        </tr>
+                        <tr>
+                            <th>AIC</th>
+                            <td>{{ summary.AIC }}</td>
+                        </tr>
+                        <tr>
+                            <th>BIC</th>
+                            <td>{{ summary.BIC }}</td>
+                        </tr>
+                        <tr>
+                            <th>HQIC</th>
+                            <td>{{ summary.HQIC }}</td>
+                        </tr>
+                        <tr>
+                            <th>Covariance Type</th>
+                            <td>{{ summary.get('Covariance Type') }}</td>
+                        </tr>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        function showDescription(id) {
+        var description = document.getElementById(id);
+        if (description.style.display === "none") {
+            description.style.display = "block";
+        } else {
+            description.style.display = "none";
+        }
+    }
+    </script>
+
+</body>
+</html>

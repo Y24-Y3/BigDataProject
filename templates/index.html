@@ -3,12 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>NYC Collisions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2, h5 {
+            color: #007bff;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .box {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .box-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .description {
+            font-weight: normal;
+        }
+    </style>
 </head>
 <body>
-    <h1>New York City Collisions</h1>
+    <div class="container">
+        <h1>New York City Collisions</h1>
 
-    {% include 'navbar.html' %}
-    
-    
+        {% include 'navbar.html' %}
+        
+        <section>
+            <div class="box">
+                <h5 class="box-title">Group Members</h5>
+                <ul>
+                    <li>Bibi Ally</li>
+                    <li>Jardel Mitchell</li>
+                    <li>Kiran Ramsingh</li>
+                    <li>Vance Ragbirsingh</li>
+                </ul>
+            </div>
+            
+            <div class="box">
+                <h5 class="box-title">Group E [NYC Crasher]</h5>
+                <p class="box-content">Course Code: COMP3610</p>
+                
+                <div class="description">
+                    <h5 class="box-title">Description</h5>
+                    <p>
+                        <strong>Problem Statement</strong><br>
+                        Our goals were to find out what were the main causes of
+                        motor vehicle accidents in NYC? What would the frequency
+                        of accidents look like in the future? And how could we use this
+                        data to help people avoid motor vehicle collisions? The data
+                        was cleaned and visualized. Due to many unique locations,
+                        clustering was used to group close-by accidents, these clusters
+                        were then used to input data onto maps for better visualization.
+                        Then time-series analysis was conducted to predict future
+                        accidents.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
